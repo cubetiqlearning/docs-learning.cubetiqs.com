@@ -55,3 +55,9 @@
 *::-webkit-scrollbar-thumb:hover {
   background-color: #808b96;
 }
+
+/* put default text in navbar to bold */
+.navbar .navbar__items a,
+.navbar .menu__list a {
+  font-weight: 700;
+}
