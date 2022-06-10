@@ -3,8 +3,8 @@
     "message": "បន្ទាប់",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Spring Boot + Kotlin Tutorial": {
-    "message": "Spring Boot Kotlin Tutorial",
+  "sidebar.tutorialSidebar.category.Spring Boot Kotlin Tutorial": {
+    "message": "មេរៀន​ Spring Boot Kotlin",
     "description": "The label for category Spring Boot + Kotlin Tutorial in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Spring Boot Kotlin Tutorial.link.generated-index.description": {
