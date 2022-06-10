@@ -1,0 +1,254 @@
+{
+  "Tutorial - 5min": {
+    "message": "Tutorial - ៥នាទី"
+  },
+  "Easy to Use": {
+    "message": "ងាយស្រួលប្រើប្រាស់"
+  },
+  "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.": {
+    "message": "Docusaurus ត្រូវ​បាន​រចនា​ឡើង​ពី​មូលដ្ឋាន​ឡើង​ដើម្បី​ដំឡើង​យ៉ាង​ងាយ​ស្រួល និង​ប្រើ​ដើម្បី​ធ្វើ​ឱ្យ​គេហទំព័រ​របស់​អ្នក​ដំណើរការ​បាន​លឿន។"
+  },
+  "Focus on What Matters": {
+    "message": "ផ្តោតលើអ្វីដែលសំខាន់"
+  },
+  "Docusaurus lets you focus on your docs, and we'll do the chores. Go ahead and move your docs into the docs directory.": {
+    "message": "Docusaurus អនុញ្ញាតឱ្យអ្នកផ្តោតលើឯកសាររបស់អ្នក ហើយយើងនឹងធ្វើកិច្ចការផ្សេងៗ។ ទៅមុខ ហើយផ្លាស់ទីឯកសាររបស់អ្នកទៅក្នុងថតឯកសារ។"
+  },
+  "Powered by React": {
+    "message": "ដំណើរការដោយ React"
+  },
+  "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.": {
+    "message": "ពង្រីក ឬកែសម្រួលប្លង់គេហទំព័ររបស់អ្នកតាមបំណងដោយប្រើប្រាស់ React ឡើងវិញ។ Docusaurus អាច​ត្រូវ​បាន​ពង្រីក ខណៈ​ពេល​ដែល​ប្រើ​បឋមកថា និង​បាតកថា​ដដែល។"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "ទំព័រនេះគាំង។",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "ព្យាយាម​ម្តង​ទៀត",
+    "description": "The label of the button to try again when the page crashed"
+  },
+  "theme.NotFound.title": {
+    "message": "រកមិនឃើញទំព័រ",
+    "description": "The title of the 404 page"
+  },
+  "theme.NotFound.p1": {
+    "message": "យើងមិនអាចស្វែងរកអ្វីដែលអ្នកកំពុងស្វែងរកបានទេ។",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "សូម​ទាក់ទង​ម្ចាស់​គេហទំព័រ​ដែល​ភ្ជាប់​អ្នក​ទៅ URL ដើម ហើយ​ប្រាប់​ពួកគេ​ថា​តំណ​របស់​ពួកគេ​ត្រូវ​បាន​ខូច។",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "បិទ",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "រំកិល​ត្រឡប់​ទៅ​កំពូល",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "បណ្ណសារ",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "បណ្ណសារ",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "ការរុករកទំព័របញ្ជីប្លុក",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "ធាតុថ្មីជាងនេះ",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "ធាតុចាស់",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "អាន​ 1 នាទី|{readingTime} នាទីអាន",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "អានបន្ថែមអំពី {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readMore": {
+    "message": "អានបន្ថែម",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "ការរុករកទំព័រប្រកាសប្លុក",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "ការប្រកាសថ្មីជាងនេះ",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "ការប្រកាសចាស់",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "ការប្រកាសមួយ|{count} ការប្រកាស",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} ដាក់ស្លាកជាមួយ \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "មើលស្លាកទាំងអស់",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "ប្តូររវាងរបៀបងងឹត និងពន្លឺ (បច្ចុប្បន្ន {mode})",
+    "description": "The ARIA label for the navbar color mode toggle"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "របៀបងងឹត",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "របៀបពន្លឺ",
+    "description": "The name for the light color mode"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "ទំព័រដើម",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "ម្សៅនំប៉័ង",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.DocCard.categoryDescription": {
+    "message": "{count} ធាតុ",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "ការរុករកទំព័រឯកសារ",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "មុន",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "បន្ទាប់",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "ឯកសារមួយបានដាក់ស្លាក|{count} ឯកសារដែលបានដាក់ស្លាក",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} ជាមួយ \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "កំណែ: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "នេះជាឯកសារដែលមិនទាន់ចេញផ្សាយសម្រាប់ {siteTitle} {versionLabel} កំណែ។",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "ឯកសារនេះសម្រាប់ {siteTitle} {versionLabel}, ដែលមិនត្រូវបានគ្រប់គ្រងនិងរក្សាយ៉ាងសកម្ម។",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "សម្រាប់ឯកសារដែលបានកែប្រែចុងក្រោយ សូមមើលទំព័រ {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "កំណែចុងក្រោយ",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "កែប្រែទំព័រនេះ",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "តំណផ្ទាល់ទៅកាន់ចំណងជើង",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " នៅ {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " ដោយ {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "ការកែប្រែចុងក្រោយ{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "កំណែ",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "រំលងទៅមាតិកាសំខាន់",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "ស្លាក",
+    "description": "The label alongside a tag list"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "ការរុករកការបង្ហោះប្រកាសថ្មីៗរបស់ប្លុក",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "ចម្លង",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "ចម្លងកូដទៅក្ដារតម្បៀតខ្ទាស់",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "ចម្លង",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "បិទ/បើក​ការ​រុំ​ពាក្យ",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
+    "message": "បិទ/បើក ប្រភេទរបារចំហៀងដែលអាចបង្រួមបាន '{label}'",
+    "description": "The ARIA label to toggle the collapsible sidebar category"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "ភាសា",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "នៅលើទំព័រនេះ",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "បង្រួមរបារចំហៀង",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "បង្រួមរបារចំហៀង",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← ត្រលប់ទៅម៉ឺនុយមេ",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "ពង្រីករបារចំហៀង",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "ពង្រីករបារចំហៀង",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  }
+}

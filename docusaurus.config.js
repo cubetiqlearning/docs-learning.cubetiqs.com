@@ -24,7 +24,15 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'kh'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      kh: {
+        label: 'ខ្មែរ',
+      }
+    },
   },
 
   presets: [
@@ -48,7 +56,7 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
+        }
       }),
     ],
   ],
@@ -75,6 +83,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          }
         ],
       },
       footer: {
