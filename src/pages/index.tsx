@@ -13,12 +13,8 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">
-          <Translate>{siteConfig.title}</Translate>
-        </h1>
-        <p className="hero__subtitle">
-          <Translate>{siteConfig.tagline}</Translate>
-        </p>
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -34,10 +30,7 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   return (
-    <Layout
-      title={`Home`}
-      description="CUBETIQ Learning are cool"
-    >
+    <Layout title={`Home`} description="CUBETIQ Learning are cool">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

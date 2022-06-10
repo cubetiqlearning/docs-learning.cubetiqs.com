@@ -3,12 +3,12 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Spring Boot + Kotlin Tutorial": {
-    "message": "Spring Boot + Kotlin Tutorial",
-    "description": "The label for category Spring Boot + Kotlin Tutorial in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Spring Boot Kotlin Tutorial": {
+    "message": "Spring Boot Kotlin Tutorial",
+    "description": "The label for category Spring Boot Kotlin Tutorial in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Spring Boot + Kotlin Tutorial.link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Spring Boot Kotlin Tutorial.link.generated-index.description": {
     "message": "Take 5 minutes to understand the content.",
-    "description": "The generated-index page description for category Spring Boot + Kotlin Tutorial in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Spring Boot Kotlin Tutorial in sidebar tutorialSidebar"
   }
 }
