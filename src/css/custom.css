@@ -5,6 +5,9 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
 :root {
   --ifm-color-primary: #2471A3;
   --ifm-color-primary-dark: #1F618D;
@@ -27,6 +30,10 @@
   --ifm-color-primary-lighter: #5DADE2;
   --ifm-color-primary-lightest: #3498DB;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Apply bubble scroll bar */
