@@ -1,0 +1,75 @@
+---
+sidebar_position: 2
+---
+
+# Spring Boot Kotlin - Bootstrapping
+
+This chapter will explain you how to perform bootstrapping on a **Spring Boot** application.
+
+### Spring Initializer
+
+- There are many ways to create a **Project Spring Boot**, but in this tutorial we will take you to create a **Project Spring Boot** on the <a href="https://start.spring.io/" target="_blank">Spring Initializer</a> website.
+
+![Spring Initializer Dashboard](/img/docs/start-spring-io.jpg)
+
+- After selecting*(Project as Gradle Project, Language as Kotlin, Spring Boot Version, provide Project Metadata such as Group, Artifact, Name, Description, Package name, Packaging as Jar, Java Version that you want to use, Dependencies are Choose Spring Web for API and Web MVC, and Spring Data JPA for connecting data in SQL with Java Persistence API using Spring Data and Hibernate, and H2 Database for in-memory database)* ready click a generate button to generate a project.
+
+- After clicking the **Generate** button, it provides a `zip file` as shown below:
+
+![Zip File Project](/img/docs/zip-file-project.jpg)
+
+- Then you can extract the `zip file`, then open the **IntelliJ IDEA IDE** and open the project you just extracted.
+
+![IntelliJ](/img/docs/intellij.jpg)
+
+- After opening the project in the **IntelliJ IDEA IDE**, you have to wait for the **IntelliJ IDEA IDE** to `sync` the project completely before you can start developing this project.
+
+![Start Project Spring IntelliJ](/img/docs/start-project-spring-intellij.jpg)
+
+- After the project is `synced`, you can take a look at the project structure as shown below:
+
+![Spring Boot Starter Folder](/img/docs/springboot-starter-folder.jpg)
+
+- The image below is a project structure that was extracted from a `zip file` and has not been properly configured.
+
+![Spring Boot Before Delete Unused File](/img/docs/springboot-before-delete-unused-file.jpg)
+
+- The image below is a project structure that deletes useless folders or files and organizes them properly.
+
+![Spring Boot After Delete Unused File](/img/docs/springboot-after-delete-unused-file.jpg)
+
+- The image below is the `build.gradle.kts` file, where you can add additional `dependencies` or modify `versions` of **Java, Kotlin, Spring Boot**, etc.
+
+![Spring Boot Grandle Build](/img/docs/springboot-grandle-build.jpg)
+
+- The following image is in the `application.properties` file, but we have modified the file `extension` to `yml`, and in this file we need to write a `configuration` with **H2 Database** to be able to connect to **H2 Database**.
+
+![Spring Boot Config H2 Database](/img/docs/springboot-config-h2-database.jpg)
+
+- The image below is the file that is the **Main Application** in **Spring Boot** and when you press the <span style={{color: 'green'}}>▶</span> button to execute the program.
+
+![Spring Boot Application Starter](/img/docs/springboot-application-starter.jpg)
+
+- The image below is the **Console Logger** where the program is executed.
+
+![Spring Boot Starter 8090](/img/docs/springboot-starter-8090.jpg)
+
+- The image below is when the program is successfully executed, then go to view the results on the browser. The reason it displays the word **`Whitelabel Error Page`** is because you have not yet created a **Controller** for this page.
+
+![Spring Boot Starter 8090 Result](/img/docs/springboot-starter-8090-result.jpg)
+
+- The image below will take you to create a file called **TestController**.
+
+![Test Contoller Folder](/img/docs/test-contoller-folder.jpg)
+
+- In the **TestController** file, there will be a path creation for the `'/testing-page'` and a **Get** function.
+
+![Test Contoller File](/img/docs/test-contoller-file.jpg)
+
+- After creating a controller and executing the program again, and after successful execution, go to the results on the `'/testing-page'` will see the following results:
+
+![Test Contoller File Result](/img/docs/test-contoller-file-result.jpg)
+
+### Summary
+
+- After studying this chapter, you will be able to create your own **Project Spring Boot**.
