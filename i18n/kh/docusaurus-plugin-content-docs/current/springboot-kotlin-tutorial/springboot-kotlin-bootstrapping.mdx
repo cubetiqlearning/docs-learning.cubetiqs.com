@@ -14,30 +14,62 @@ sidebar_position: 2
 
 - បន្ទាប់ពីបានរើសនូវ(*Project ជា Gradle Project, Language ជា Kotlin, Spring Boot Version ចុងក្រោយ, ផ្តល់ជា Project Metadata ដូចជា Group, Artifact, Name, Description, Package name, Packaging ជា Jar, Java Version ដែលអ្នកចង់ប្រើ, Dependencies គឺរើសយក Spring Web សម្រាប់បង្កើតជា API និង Web MVC រីឯ Spring Data JPA សម្រាប់ភ្ជាប់ទិន្នន័យនៅក្នុង SQL ជាមួយនឹង Java Persistence API ដោយប្រើប្រាស់ Spring Data និង Hibernate រីឯ H2 Database ជាប្រភេទ in-memory database*) បានរួចរាល់ហើយប៊ូតុង **Generate** ដើម្បី **Generate** នូវ **Project** ។
 
+- បន្ទាប់ពីចុចប៊ូតុង **Generate** រួចរាល់ វាផ្តល់ `zip file` មួយដូចរូបខាងក្រោម:
+
 ![Zip File Project](/img/docs/zip-file-project.jpg)
+
+- បន្ទាប់មកអ្នកអាចធ្វើការ **Extract** នូវ `zip file` នោះ ហើយបន្ទាប់គឺបើក **IntelliJ IDEA IDE** ហើយបើកនូវ **Project** ដែលអ្នកបាន **Extract** រួចរាល់នោះ។
 
 ![IntelliJ](/img/docs/intellij.jpg)
 
+- បន្ទាប់ពីបានបើក **Project** នោះនៅក្នុង **IntelliJ IDEA IDE** រួចរាល់គឺអ្នកត្រូវធ្វើការរងចាំឲ្យ **IntelliJ IDEA IDE** ត្រូវធ្វើការ **Sync** នូវ **Project** ឲ្យចប់អស់សិន ទើបអ្នកអាចចាប់ផ្តើមអភិវឌ្ឍនូវ **Project** មួយនេះបាន។
+
 ![Start Project Spring IntelliJ](/img/docs/start-project-spring-intellij.jpg)
+
+- បន្ទាប់ពី **Project** ត្រូវបាន **Synced** រួចរាល់ អ្នកអាចក្រឡេកមើលនូវ **Project Structure** បន្តិច ដូចរូបខាងក្រោម:
 
 ![Spring Boot Starter Folder](/img/docs/springboot-starter-folder.jpg)
 
+- រូបភាពខាងក្រោមនេះគឺជា **Project Structure** ដែលត្រូវបាន **Extract** ចេញពី `zip file` ហើយមិនទាន់បានរៀបចំត្រឹមត្រូវ។​
+
 ![Spring Boot Before Delete Unused File](/img/docs/springboot-before-delete-unused-file.jpg)
+
+- រូបភាពខាងក្រោមនេះគឺជា Project Structure ដែលត្រូវបានលុបចោលនូវ Folders ឬក៏ Files ដែលឥតប្រយោជន៍ចោល និងបានរៀបចំបានត្រឹមត្រូវ។
 
 ![Spring Boot After Delete Unused File](/img/docs/springboot-after-delete-unused-file.jpg)
 
+- រូបភាពខាងក្រោមនេះគឺជាឯកសារ `build.gradle.kts` ដែលជាឯកសារអ្នកអាចបន្ថែមនូវ `dependencies` ចូលបន្ថែមឬក៏កែប្រែ **Version** នៃ **Java, Kotlin, Spring Boot** ។ល។
+
 ![Spring Boot Grandle Build](/img/docs/springboot-grandle-build.jpg)
+
+- រូបភាពខាងក្រោមនេះគឺនៅក្នុងឯកសារ `application.properties` តែខាងយើងបានធ្វើការកែប្រែ `extension` របស់ឯកសារទៅជា `yml` វិញ ហើយនៅក្នុងឯកសារនេះគឺត្រូវសរសេរនូវ configuration ជាមួយ **H2 Database** ដើម្បីអាចភ្ជាប់ទៅ **H2 Database** បាន។
 
 ![Spring Boot Config H2 Database](/img/docs/springboot-config-h2-database.jpg)
 
+- រូបភាពខាងក្រោមនេះគឺជាឯកសារដែលជា **Main Application** នៅក្នុងកម្មវិធី **Spring Boot** ហើយនៅពេលដែលអ្នកចុចប៊ូតុង <span style={{color: 'green'}}>▶</span> ដើម្បីប្រតិបត្តិនូវកម្មវិធី។
+
 ![Spring Boot Application Starter](/img/docs/springboot-application-starter.jpg)
+
+- រូបភាពខាងក្រោមនេះគឺជា **Console Logger** ដែលកម្មវិធីត្រូវបានប្រតិបត្តិ។
 
 ![Spring Boot Starter 8090](/img/docs/springboot-starter-8090.jpg)
 
+- រូបភាពខាងក្រោមនេះគឺនៅពេលកម្មវិធីត្រូវបានប្រតិបត្តិបានជោគជ័យ បន្ទាប់មកទៅបើកមើលលទ្ធផលនៅលើ **Browser** ។ មូលហេតុដែលវាចេញពាក្យ **Whitelabel Error Page** គឺដោយសារតែអ្នកមិនទាន់បង្កើតនូវ **Controller** សម្រាប់ទំព័រមួយនេះ។
+
 ![Spring Boot Starter 8090 Result](/img/docs/springboot-starter-8090-result.jpg)
+
+- រូបភាពខាងក្រោមនេះគឺនឹងនាំអ្នកទៅបង្កើតឯកសារមួយមានឈ្មោះថា **TestController** ។
 
 ![Test Contoller Folder](/img/docs/test-contoller-folder.jpg)
 
+- ដែលនៅក្នុងឯកសារ **TestController** នោះគឺនឹងមានជាការបង្កើតនៅ **route** មួយសម្រាប់ទំព័រ `'/testing-page'` ហើយមានមុខងារមួយជាប្រភេទ **Get** ។
+
 ![Test Contoller File](/img/docs/test-contoller-file.jpg)
 
+- បន្ទាប់ពីបានបង្កើត **Controller** មួយរួចហើយធ្វើការប្រតិបត្តិកម្មវិធីសារជាថ្មី ហើយបន្ទាប់ពីប្រតិបត្តិបានជោគជ័យគឺទៅបើកមើលលទ្ធផលនៅទំព័រ `'/testing-page'` នឹងឃើញលទ្ធផលដូចខាងក្រោម:
+
 ![Test Contoller File Result](/img/docs/test-contoller-file-result.jpg)
+
+### សរុបសេចក្តី
+
+- បន្ទាប់ពីអ្នកបានសិក្សានូវជំពូកនេះចប់ អ្នកនឹងអាចបង្កើត **Project Spring Boot** ដោយខ្លួនឯងបាន។
