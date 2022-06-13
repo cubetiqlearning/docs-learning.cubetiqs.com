@@ -36,6 +36,10 @@
   font-family: 'Suwannaphum', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Apply bubble scroll bar */
 *::-webkit-scrollbar {
   width: 10px;
