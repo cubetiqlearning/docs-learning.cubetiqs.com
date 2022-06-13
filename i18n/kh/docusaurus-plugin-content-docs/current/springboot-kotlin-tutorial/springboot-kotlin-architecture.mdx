@@ -1,0 +1,23 @@
+---
+sidebar_position: 3
+---
+
+# Spring Boot Kotlin - Architecture
+
+ជំពូកនេះនឹងពន្យល់អ្នកពី **Architecture** នៅលើកម្មវិធី **Spring Boot** ។
+
+### Spring Boot Architecture
+
+មុននឹងអាចសិក្សាពី **Spring Boot** បន្ថែមទៀតអ្នកគួរគប្បីស្វែងយល់ពី **Architecture** របស់ **Spring Boot** ជាមុនសិន ដែលមានចំនួនបួនដូចខាងក្រោម:
+
+- **Presentation Layer**: ជា `layer` ដែល `handles` ទៅលើ **HTTP Requests**, ធ្វើការបកប្រែនូវ **JSON Parameter** ទៅជា `object`, នឹងធ្វើការផ្ទៀងផ្ទាត់នូវ `request` បន្ទាប់មកបញ្ជូនបន្តទៅកាន់ `business layer`
+
+- **Business Layer**: ជា `layer` ដែល `handles` ទៅលើរាល់ `business logic` ទាំងអស់
+
+- **Persistence Layer**: ជា `layer` ដែល `handles` ទៅលើរាល់ `storage logic` ទាំងអស់នឹងធ្វើការបងប្រែ `business object` ទៅជា `database rows`
+
+- **Database Layer**: ជា `layer` ដែល `handles` ទៅលើ **CRUD Operations**
+
+### Spring Boot Flow Architecture
+
+![Spring Boot Flow Architecture](/img/docs/springboot-flow-architecture.jpg)
