@@ -75,6 +75,61 @@ sidebar_position: 2
 
 ![Spring Boot Grandle Build](/img/docs/springboot-grandle-build.jpg)
 
+- ស្វែងយល់បន្ថែមពីឯកសារ `build.gradle.kts`:
+
+```shell
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+  id("org.springframework.boot") version "2.5.1"
+  id("io.spring.dependency-management") version "1.0.11.RELEASE"
+  kotlin("jvm") version "1.5.10"
+  kotlin("plugin.spring") version "1.5.10"
+  kotlin("plugin.jpa") version "1.5.10"
+}
+```
+
+- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ ពេលប្រើវាចឹងហើយ គឺវាងាយស្រួលត្រង់ថាអ្នកមិនចាំបាច់ប្រើប្រាស់ `open keyword` នៅពីមុខ `class` អីទេ អាចប្រើ `annotation` ជំនួសបានដូចជា `@Configuration` ។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់តែ `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
+
+```shell
+group = "com.webapp"
+version = "0.0.1-SNAPSHOT"
+java.soruceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+  mavenCentral()
+}
+```
+
+```shell 
+dependencies {
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("org.jetbrains.kotlin:kotlin-reflect")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+  runtimeOnly("com.h2database:h2")
+  testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+```
+
+```shell
+tasks.withType<KotlinCompile> {
+  kotlinOptions {
+    freeCompilerArgs = listOf("-Xjsr305=strict")
+    jvmTarget = "11"
+  }
+}
+```
+
+- **Compile options**: លក្ខណះសំខាន់របស់ **Kotlin** គឺ `null-safety` ដែលជាវាជួយដោះស្រាយបញ្ហាបានយ៉ាងច្រើននៅពេល `compile time` វាជៀសវាងនូវការ `exception` ដ៏ល្បីគឺ **NullPointerException** នៅពេល `run time` ។ ដើម្បីបន្ថែមនូវមុខងារ `null-safety` នេះបានគឺអ្នកត្រូវបន្ថែមនូវ `-Xjsr305` *compiler* ដែលមាន *flag* ជាមួយនឹង `strict` ។
+
+```shell
+tasks.withType<Test> {
+  useJUnitPlatform()
+}
+```
+
 - រូបភាពខាងក្រោមនេះគឺនៅក្នុងឯកសារ `application.properties` តែខាងយើងបានធ្វើការកែប្រែ `extension` របស់ឯកសារទៅជា `yml` វិញ ហើយនៅក្នុងឯកសារនេះគឺត្រូវសរសេរនូវ configuration ជាមួយ **H2 Database** ដើម្បីអាចភ្ជាប់ទៅ **H2 Database** បាន។
 
 ![Spring Boot Config H2 Database](/img/docs/springboot-config-h2-database.jpg)
