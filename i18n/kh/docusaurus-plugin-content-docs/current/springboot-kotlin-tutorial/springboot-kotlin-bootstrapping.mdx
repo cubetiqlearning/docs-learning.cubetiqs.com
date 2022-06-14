@@ -95,11 +95,17 @@ plugins {
 group = "com.webapp"
 version = "0.0.1-SNAPSHOT"
 java.soruceCompatibility = JavaVersion.VERSION_11
+```
 
+- ខាងលើនេះគឺមានជា `group` ដែលជាឈ្មោះ `package`, `version` ជា `version` នៃ `application` ដែលត្រូវបាន `build`, `java.soruceCompatibility` ជាការកំណត់ទៅលើ `version` របស់ **Java** សម្រាប់ `build` ។
+
+```shell
 repositories {
   mavenCentral()
 }
 ```
+
+- **Repositories**: ជាការកំណត់នូវកន្លែងនៃការទាញយក `dependencies` មកប្រើនៅក្នុង **Project** ដូចពេលអ្នកដាក់ `mavenCentral()` ចឹងវានឹងទៅទាញយកនៅគេហទំព័រ <a href="https://mvnrepository.com/repos/central" target="_blank">Maven Central Repository</a> ។
 
 ```shell 
 dependencies {
@@ -112,6 +118,9 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 ```
+
+
+
 
 ```shell
 tasks.withType<KotlinCompile> {
@@ -129,6 +138,10 @@ tasks.withType<Test> {
   useJUnitPlatform()
 }
 ```
+
+- **Test options**: ជាការចុះបញ្ជីក្នុងការ `testing` ដោយប្រើ **JUnit5** ។
+
+---
 
 - រូបភាពខាងក្រោមនេះគឺនៅក្នុងឯកសារ `application.properties` តែខាងយើងបានធ្វើការកែប្រែ `extension` របស់ឯកសារទៅជា `yml` វិញ ហើយនៅក្នុងឯកសារនេះគឺត្រូវសរសេរនូវ configuration ជាមួយ **H2 Database** ដើម្បីអាចភ្ជាប់ទៅ **H2 Database** បាន។
 
