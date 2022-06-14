@@ -12,7 +12,42 @@ This chapter will explain you how to perform bootstrapping on a **Spring Boot** 
 
 ![Spring Initializer Dashboard](/img/docs/start-spring-io.jpg)
 
-- After selecting*(Project as Gradle Project, Language as Kotlin, Spring Boot Version, provide Project Metadata such as Group, Artifact, Name, Description, Package name, Packaging as Jar, Java Version that you want to use, Dependencies are Choose Spring Web for API and Web MVC, and Spring Data JPA for connecting data in SQL with Java Persistence API using Spring Data and Hibernate, and H2 Database for in-memory database)* ready click a generate button to generate a project.
+- In the image above, you will see a dashboard that is used to create a **Project Spring Boot**. We will now take you through each point in this dashboard
+
+  - **Project**: In this section, you are required to select the type of **Project Manager** _(Project Manager is the one who can properly organize the dependencies that you need to use in the project, and on the other hand can set the version of the project and more, etc.)_ And for project managers, there are two as follows:
+
+    - **Maven** is a project management tool that is open-source software and is primarily used for **Java Project**.
+    - **Gradle** is an open-source automation tool based on the concepts of **Apache Maven** and **Apache Ant**.
+
+    The reason you should use **Gradle** is because it avoids tracking the same tasks and it only tracks the tasks that have been changed, so it provides faster processing.
+
+  - **Language**: In this section you are required to select the following language types:
+
+    - **Java** is a widely used programming language running on millions of devices including PCs, laptops, mobile devices, gaming consoles, medical devices and more. The synctax of the **Java** language is dependent on the **C** and **C++** languages.
+    - **Kotlin** is a new open source programming language similar to **Java** and **JavaScript**. It is a rich language that brings together many functions in one place. Kotlin currently runs on JVMs.
+    - **Groovy** is object oriented and has a Java-like format. **Groovy** code is compiled into **Java Bytecode** and can run on any platform with **JRE**.
+
+  - **Spring Boot**: In this section you are required to select the version of **Spring Boot**, so you should choose the latest version.
+
+  - **Project Metadata**: In this section you are required to fill in some project related information:
+
+    - **Group** specifies the name of the `package`.
+    - **Artifact** is the name of the `Application`.
+    - **Name** same as `Artifact`.
+    - **Description** as a description of the `Project`.
+    - **Package name** same as `Group`.
+    - **Packaging** is a selection of types of `packaging` for `build` to take to use, and there are two:
+      - **Jar** is a **Java Application Archive** that can run programs on your computer.
+      - **War** is a **Web Application Archive** that can only run programs on the server.
+    - **Java** is a selection of `versions` of **Java**, so you can choose which `version` you want to use.
+
+  - **Dependencies**: In this section, you are required to select a type of dependency, so you can select the dependencies as shown in the picture or select only one **Spring Web**.
+
+  After this you will see three more buttons below:
+
+  - **GENERATE**: a button for creating a **Spring Boot Project**.
+  - **EXPLOER**: a button to view the **Structure of Spring Boot Project**.
+  - **SHARE...**: a button for sharing **Spring Boot Project**.
 
 - After clicking the **Generate** button, it provides a `zip file` as shown below:
 
