@@ -89,7 +89,7 @@ plugins {
 }
 ```
 
-- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ ពេលប្រើវាចឹងហើយ គឺវាងាយស្រួលត្រង់ថាអ្នកមិនចាំបាច់ប្រើប្រាស់ `open keyword` នៅពីមុខ `class` អីទេ អាចប្រើ `annotation` ជំនួសបានដូចជា `@Configuration` ។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់តែ `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
+- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ ពេលប្រើវាចឹងហើយ គឺវាងាយស្រួលត្រង់ថាអ្នកមិនចាំបាច់ប្រើប្រាស់ `open keyword` នៅពីមុខ `class` អីទេ អាចប្រើ `annotation` ជំនួសបានដូចជា `@Configuration` ។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់ដែល `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
 
 ```shell
 group = "com.webapp"
