@@ -30,22 +30,24 @@ sidebar_position: 2
   - **Spring Boot**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ `version` របស់ **Spring Boot** ដូច្នេះអ្នកគួរជ្រើសរើសយក `version` ចុងក្រោយគេ។
 
   - **Project Metadata**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការបំពេញនៅព័ត៌មានចំនួនទាក់ទងនឹង **Project** :
+
     - **Group** ជាការបញ្ជាក់ឈ្មោះរបស់ `package` ។
     - **Artifact** ជាការបញ្ជាក់ឈ្មោះនៃ `Application` ។
     - **Name** ដូចទៅនឹង `Artifact` ដែរ។
     - **Description** ជាការពិពណ៍នាទៅលើ `Project` ។
     - **Package name** ដូចទៅនឹង `Group` ។
     - **Packaging** ជាការជ្រើសរើសនូវប្រភេទនៃ `packaging` សម្រាប់ `build` យកទៅដំណើរក្នុងការប្រើប្រាស់ ហើយវាមានពីរគឺ:
-        - **Jar** ជា **Java Application Archive** ដែលអាចដំណើរការកម្មវិធីនៅកុំព្យូទ័ររបស់ប្រើប្រាស់បានធម្មតា​។
-        - **War** ជា **Web Application Archive** ដែលអាចដំណើរការកម្មវិធីបានតែនៅលើ `server` ។
+      - **Jar** ជា **Java Application Archive** ដែលអាចដំណើរការកម្មវិធីនៅកុំព្យូទ័ររបស់ប្រើប្រាស់បានធម្មតា​។
+      - **War** ជា **Web Application Archive** ដែលអាចដំណើរការកម្មវិធីបានតែនៅលើ `server` ។
     - **Java** ជាការជ្រើសរើសនូវប្រភេទនៃ `version` របស់ **Java** ដូច្នេះអ្នកអាចជ្រើសរើសយក `version` ណាដែលអ្នកចង់ប្រើបាន។
 
   - **Dependencies**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ `dependencies` ដូច្នេះអ្នកអាចរើសនូវ `dependencies` ដូចក្នុងរូបក៏បានឬក៏រើសតែ **Spring Web** មួយសិនក៏បាន។
 
   បន្ទាប់ពីនេះអ្នកនឹងឃើញនូវប៊ូតុងនៅខាងក្រោមចំនួនបីបន្ថែមទៀត:
-    - **GENERATE**: ជាប៊ូតុងសម្រាប់បង្កើត **Project Spring Boot** ។
-    - **EXPLOER**: ជាប៊ូតុងសម្រាប់មើល **Structure Project Spring Boot** ។
-    - **SHARE...**: ជាប៊ូតុងសម្រាប់ចែករំលែក **Project Spring Boot** ។
+
+  - **GENERATE**: ជាប៊ូតុងសម្រាប់បង្កើត **Project Spring Boot** ។
+  - **EXPLOER**: ជាប៊ូតុងសម្រាប់មើល **Structure Project Spring Boot** ។
+  - **SHARE...**: ជាប៊ូតុងសម្រាប់ចែករំលែក **Project Spring Boot** ។
 
 - បន្ទាប់ពីចុចប៊ូតុង **Generate** រួចរាល់ វាផ្តល់ `zip file` មួយដូចរូបខាងក្រោម:
 
@@ -89,7 +91,7 @@ plugins {
 }
 ```
 
-- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ ពេលប្រើវាចឹងហើយ គឺវាងាយស្រួលត្រង់ថាអ្នកមិនចាំបាច់ប្រើប្រាស់ `open keyword` នៅពីមុខ `class` អីទេ អាចប្រើ `annotation` ជំនួសបានដូចជា `@Configuration` ។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់ដែល `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
+- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់ដែល `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
 
 ```shell
 group = "com.webapp"
@@ -107,7 +109,7 @@ repositories {
 
 - **Repositories**: ជាការកំណត់នូវកន្លែងនៃការទាញយក `dependencies` មកប្រើនៅក្នុង **Project** ដូចពេលអ្នកដាក់ `mavenCentral()` ចឹងវានឹងទៅទាញយកនៅគេហទំព័រ <a href="https://mvnrepository.com/repos/central" target="_blank">Maven Central Repository</a> ។
 
-```shell 
+```shell
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-web")
@@ -119,8 +121,20 @@ dependencies {
 }
 ```
 
+- **Dependencies**: `Library` ចំនួនបីរបស់ **Kotlin** ដែលត្រូវបានទាមទារសម្រាប់ **Project Spring Boot** ដែលមានដូចខាងក្រោម:
 
+  - **kotlin-stdlib-jdk8**: ជាស្តង់ដារ `Library` របស់ **Kotlin** នៃ **Java 8 Variant** ។
+  - **kotlin-reflect**: ជា **Kotlin** `reflection library` ។
+  - **jackson-module-kotlin**: ដាក់សម្រាប់ឲ្យគាំទ្រនឹង `serialization/deserialization` នៃ `classes` និង `data classes` របស់ **Kotlin** ។
 
+  ហើយនៅមាន `dependencies` មួយចំនួនទៀត ដែលជារបស់ **Spring** និង **Database** ដែលមានដូចខាងក្រោម:
+
+  - **spring-boot-starter-data-jpa**: ជា `Library` របស់ **Spring Data JPA** ។
+  - **spring-boot-starter-web**: ជា `Library` របស់ **Spring Web** ។
+  - **h2**: ជា `Library` របស់ **H2 Database** ។
+  - **spring-boot-starter-test**: ជា `Library` របស់ **Spring Test** ។
+
+  មួយវិញទៀត ឃើញថានៅរាល់ការទាញយក `dependencies` មកគឺមានជាការប្រើនូវមុខងារផ្សេងៗគ្នាដូចជា `implementation` ដែលប្រើសម្រាប់ឲ្យដំណើរការនូវ `dependencies` នោះចាប់ផ្តើមតាំងពីពេល `implement` ទៅ(ពេលសរសេរកូដ), `runtimeOnly` គឺដំណើរការតែពេល `run time` រីឯ `testImplementation` គឺដំណើរការនៅពេល `test` ។
 
 ```shell
 tasks.withType<KotlinCompile> {
@@ -131,7 +145,7 @@ tasks.withType<KotlinCompile> {
 }
 ```
 
-- **Compile options**: លក្ខណះសំខាន់របស់ **Kotlin** គឺ `null-safety` ដែលជាវាជួយដោះស្រាយបញ្ហាបានយ៉ាងច្រើននៅពេល `compile time` វាជៀសវាងនូវការ `exception` ដ៏ល្បីគឺ **NullPointerException** នៅពេល `run time` ។ ដើម្បីបន្ថែមនូវមុខងារ `null-safety` នេះបានគឺអ្នកត្រូវបន្ថែមនូវ `-Xjsr305` *compiler* ដែលមាន *flag* ជាមួយនឹង `strict` ។
+- **Compile options**: លក្ខណះសំខាន់របស់ **Kotlin** គឺ `null-safety` ដែលជាវាជួយដោះស្រាយបញ្ហាបានយ៉ាងច្រើននៅពេល `compile time` វាជៀសវាងនូវការ `exception` ដ៏ល្បីគឺ **NullPointerException** នៅពេល `run time` ។ ដើម្បីបន្ថែមនូវមុខងារ `null-safety` នេះបានគឺអ្នកត្រូវបន្ថែមនូវ `-Xjsr305` _compiler_ ដែលមាន _flag_ ជាមួយនឹង `strict` ។
 
 ```shell
 tasks.withType<Test> {
