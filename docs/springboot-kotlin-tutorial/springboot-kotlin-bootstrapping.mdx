@@ -77,6 +77,84 @@ This chapter will explain you how to perform bootstrapping on a **Spring Boot** 
 
 ![Spring Boot Grandle Build](/img/docs/springboot-grandle-build.jpg)
 
+- Find out more about `build.gradle.kts` file:
+
+```shell
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+  id("org.springframework.boot") version "2.5.1"
+  id("io.spring.dependency-management") version "1.0.11.RELEASE"
+  kotlin("jvm") version "1.5.10"
+  kotlin("plugin.spring") version "1.5.10"
+  kotlin("plugin.jpa") version "1.5.10"
+}
+```
+
+- **Plugins**: In addition to the **Kotlin Gradle plugin**, the default `configuration` is the `kotlin-spring-plugin` declaration, which allows the `classes` and `methods` to be open, allowing other classes to be `inherited`*(classes in Kotlin are not As in Java, if you do not put the open keyword in front of the class, it will be the final class)*. On the other hand, to be able to use `Kotlin non-nullable properties` with **JPA**, you need to have the **Kotlin JPA plugin** enabled. This will create `no-arg constructors` for all classes `annotated` with `@Entity`, `@MappedSuperclass`, or `@Embeddeable`.
+
+```shell 
+group = "com.webapp"
+version = "0.0.1-SNAPSHOT"
+java.soruceCompatibility = JavaVersion.VERSION_11
+```
+
+- Above is a `group` that is the `package name`, `version` is the version of the `application` that was `built`, `java.soruceCompatibility` is the setting for the `version` of **Java** for `build`.
+
+```shell
+repositories {
+  mavenCentral()
+}
+```
+
+- **Repositories**: Set the location for downloading `dependencies` to use in the **Project**, as when you put `mavenCentral()`, it will go to the <a href="https://mvnrepository.com/repos/central" target="_blank">Maven Central Repository</a> download site.
+
+```shell
+dependencies {
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("org.jetbrains.kotlin:kotlin-reflect")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+  runtimeOnly("com.h2database:h2")
+  testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+```
+
+- **Dependencies**: The three **Kotlin** libraries required for **Project Spring Boot** are as follows:
+  - **kotlin-stdlib-jdk8**: The **Kotlin** library standard of the **Java 8 Variant**.
+  - **kotlin-reflect**: A **Kotlin** reflection library.
+  - **jackson-module-kotlin**: Provides support for `serialization/deserialization` of **Kotlin** classes and data classes.
+
+  And there are some `dependencies` that belong to **Spring** and **Database** as follows:
+  - **spring-boot-starter-data-jpa**: A **Spring Data JPA** library.
+  - **spring-boot-starter-web**: A **Spring Web** library.
+  - **h2**: The library of the **H2 Database**.
+  - **spring-boot-starter-test**: **Spring Test** library.
+
+  On the other hand, in every download `dependencies`, there is the use of different functions, such as `implementation` used to run those `dependencies`, starting from the `implementation` (when coding), `runtimeOnly` is only run at `run time` and the `testImplementation` is run during the `test`.
+
+```shell
+tasks.withType<KotlinCompile> {
+  kotlinOptions {
+    freeCompilerArgs = listOf("-Xjsr305=strict")
+    jvmTarget = "11"
+  }
+}
+```
+
+- **Compile options**: The main feature of **Kotlin** is `null-safety`, as it solves a lot of problems when `compiling time`, it avoids the famous exception `NullPointerException` at `run time`. To add this `null-safety` function, you need to add `-Xjsr305` *compiler* with *flag* with `strict`.
+
+```shell
+tasks.withType<Test> {
+  useJUnitPlatform()
+}
+```
+
+- **Test options**: A registration for `testing` using **JUnit5**.
+
+---
+
 - The following image is in the `application.properties` file, but we have modified the file `extension` to `yml`, and in this file we need to write a `configuration` with **H2 Database** to be able to connect to **H2 Database**.
 
 ![Spring Boot Config H2 Database](/img/docs/springboot-config-h2-database.jpg)
