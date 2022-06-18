@@ -21,3 +21,11 @@ sidebar_position: 3
 ### Spring Boot Flow Architecture
 
 ![Spring Boot Flow Architecture](/img/docs/springboot-flow-architecture.jpg)
+
+រូបភាពខាងលើនេះគឺតំណាងឲ្យ `Basic Flow Architecture` សម្រាប់ **Project Spring Boot**:
+
+- **Model**: មានតួនាទីក្នុងការបង្កើត `Table` និងមានទំនាក់ទំនងជាមួយនឹង `Database` ។
+- **Repository**: មានតួនាទីក្នុងការបង្កើតទិន្នន័យ, កែប្រែទិន្នន័យ, លុបទិន្នន័យ, និងបង្ហាញទិន្នន័យពី `Database` ហើយវាមានទំនាក់ទំនងជាមួយនឹង `Model` ។
+- **Service**: មានតួនាទីក្នុងការបង្កើតលក្ខខណ្ឌ(business logic) ទៅឲ្យកម្មវិធី ហើយវាមានទំនាក់ទំនងជាមួយនឹង `Repository` មួយវិញទៀតដើម្បីអាចប្រើប្រាស់ `Repository` នៅក្នុង `Service` បានលុះត្រាអ្នកធ្វើការ `inject` នូវ​ `dependency` របស់ `repository` នោះមកទើបអាចប្រើបាន។
+- **Controller**: មានតួនាទីក្នុងការបង្កើតជា `http request endpoint` សម្រាប់ឲ្យ `client` អាចធ្វើការ `request` នូវអ្វីដែល `client` ចង់បានដូចជាការបង្កើតទិន្នន័យ, កែប្រែទិន្នន័យ, លុបទិន្នន័យ, និងបង្ហាញទិន្នន័យ ហើយវាមានទំនាក់ទំនងជាមួយនឹង `Service` មួយវិញទៀតដើម្បីអាចប្រើប្រាស់ `Service` នៅក្នុង `Controller` បានលុះត្រាអ្នកធ្វើការ `inject` នូវ​ `dependency` របស់ `service` នោះមកទើបអាចប្រើបាន។
+- **Client**: ជាផ្នែក `client side` ដែលមានតួនាទីក្នុងការ `request` ទៅកាន់ `endpoint` របស់ `Controller` ។
