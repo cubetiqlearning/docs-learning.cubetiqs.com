@@ -20,4 +20,29 @@ dependencies {
 }
 ```
 
-នៅក្នុង **Spring Web Dependency** គឺមាន **Spring MVC**, **REST** និង **Tomcat** ដែលជា `server` ។
+នៅក្នុង **Spring Starter Web Dependency** គឺមាន **Spring MVC**, **REST** និង **Tomcat** ដែលជា `server` ។
+
+### បង្កើតកម្មវិធីគេហទំព័រក្នុងលក្ខណះសាមញ្ញមួយ
+
+អ្នកអាចបង្កើតនូវ `web controller` មួយសម្រាប់បង្កើតជាកម្មវិធីគេហទំព័រក្នុងលក្ខណះសាមញ្ញមួយ ដែលស្ថិតនៅក្នុង `folder` បែបនេះ `src/main/kotlin/com/cubetiq/springboot/HelloController.kt`:
+
+```kotlin 
+package com.cubetiq.springboot
+
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+class HelloController {
+    @GetMapping("/")
+    fun index(): String {
+        return "Greetings from Spring Boot!"
+    }
+}
+```
+
+បន្ទាប់ពីអ្នកបានបង្កើតនូវ `web controller` ហើយបានសរសេរនូវកូដខាងលើចូលហើយ អ្នកអាចធ្វើការ `run` នូវ `project` ហើយបន្ទាប់ពី `run` បានជោគជ័យ អ្នកត្រូវទៅបើក `browser` ហើយវាយអាសយដ្ឋានបែបនេះ `http://localhost:8080` ហើយពេលចូលដល់ទំព័រនេះហើយ អ្នកនឹងឃើញលទ្ធផល `Greetings from Spring Boot!` ។
+
+### សរុបសេចក្តី
+
+- បន្ទាប់ពីអ្នកបានសិក្សានូវជំពូកនេះចប់ អ្នកនឹងអាចយល់ដឹងបានច្រើនទាក់ទងនឹង **Spring Boot Start Web Dependency** ។
