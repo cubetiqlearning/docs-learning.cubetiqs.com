@@ -1,0 +1,48 @@
+---
+sidebar_position: 5
+---
+
+# Spring Boot Kotlin - Data JPA
+
+ជំពូកនេះនឹងពន្យល់អ្នកពី **Dependency Spring Data JPA** ជាអ្វីហើយអាចធ្វើអ្វីបានខ្លះនៅលើកម្មវិធី **Spring Boot** ។
+
+### Spring Boot Data JPA
+
+វាជាផ្នែកដ៏ធំមួយរបស់គ្រួសារនៃ **Spring Data** ។ វាផ្តល់នូវលក្ខណះងាយស្រួលក្នុងការ `implement` នូវ **JPA repository** ដើម្បីមកប្រើប្រាស់។ នៅពេលដែលអ្នកអាចប្រើប្រាស់នូវ **JPA repository** បានគឺអ្នកអាចធ្វើការបង្កើតទិន្នន័យ, កែប្រែទិន្នន័យ, លុបទិន្នន័យ, និងបង្ហាញទិន្នន័យពី `table` នៅក្នុង `database` បានយ៉ាងងាយស្រួល។
+
+បើសិនជាអ្នកចង់ប្រើ `dependency` មួយនេះ អ្នកត្រូវបន្ថែមនូវ `dependency` មួយនេះនៅក្នុងឯកសារ `build.gradle.kts`:
+
+```shell
+dependencies {
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+}
+```
+
+បន្ទាប់ពីអ្នកបន្ថែមនូវ `dependency spring-boot-starter-data-jpa` រួចរាល់គឺអ្នកត្រូវបន្ថែមនូវ `dependency` មួយទៀតដែលបញ្ជាក់ប្រភេទនៃ `database` ដែលអ្នកត្រូវប្រើ​:
+
+```shell
+dependencies {
+  runtimeOnly("org.postgresql:postgresql")
+}
+```
+
+សម្រាប់ក្នុងមេរៀននេះគឺនឹងនាំអ្នកទៅប្រើប្រាស់ **Database Postgresql** ។
+
+### JPA ជាមួយនឹងការចាប់ផ្តើមជាមួយ Spring Boot
+
+វាមានវិធីជាច្រើនក្នុងការចាប់ផ្តើមជាមួយនឹង **JPA** តែអ្វីដែលខាងយើងនឹងបង្ហាញអ្នក គឺការចាប់ផ្តើមជាមួយនឹងឯកសារ `application.properties` ស្ថិតនៅក្នុង `src/main/resources/application.properties` ហើយយើងនឹងធ្វើការប្តូរនូវប្រភេទឯកសារទៅជាឯកសារប្រភេទ `yml` វិញព្រោះឯកសារប្រភេទ `yml` អាចជួយយើងបានច្រើនទាក់ទងនឹងការកាត់បន្ថយនូវភាពច្រំដែលនៃការសរសេរ `config` ។
+
+```yml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springboot-db
+    username: springboot-db
+    password: springboot-db
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+```
+
+ចំណុចសំខាន់នៅក្នុងការសរសេរ `config` ខាងលើនេះគឺ `url` ដែលអ្នកត្រូវដាក់នូវ `url` របស់ `database` របស់អ្នក, `username` គឺអ្នកត្រូវដាក់នូវ `username` របស់ `database`, `password` គឺអ្នកត្រូវដាក់នូវ `password` របស់ `database`, `driver-class-name` គឺអ្នកត្រូវដាក់នូវ `driver` របស់ `database`, `ddl-auto` គឺអ្នកត្រូវកំណត់អំពីសកម្មភាពនៃ `table` ដែលនៅពេលដែលអ្នក `run` នូវ `application` ថាចង់ឲ្យ `table` បង្កើតថ្មីឬក៏មិនបង្កើតថ្មីទេ តែបើមានកែប្រែគឺត្រូវតែកែប្រែនៅលើ `table` ដូចគ្នា ហើយសម្រាប់ចំណុចនេះគឺយើងប្រើប្រាស់ `update` គឺមានន័យថានៅពេលដែលយើង `run` នូវ `application` សារថ្មីគឺវានឹងមិនបង្កើតនូវ `table` ជាថ្មីនោះទេ តែបើមានអីកែប្រែ វានឹងកែប្រែ `table`, `show-sql` គឺអ្នកដាក់នូវតម្លៃ `true` ឬក៏ `false` បើសិនជាអ្នកដាក់ `true` នោះនៅក្នុង `console` នឹងមាន `log` បង្ហាញមក តែបើ `false` វានឹងមិនបង្ហាញ `log` ទេ។
