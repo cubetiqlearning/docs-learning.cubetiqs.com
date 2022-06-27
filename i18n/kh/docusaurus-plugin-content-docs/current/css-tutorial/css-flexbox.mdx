@@ -1,0 +1,131 @@
+---
+sidebar_position: 2
+---
+
+# CSS - Flexbox
+
+### What is CSS Flexbox?
+
+- **CSS Flexbox** គឺប្រើសម្រាប់កំណត់ធាតុនីមួយៗឲ្យមានភាពស្រស់ស្អាតនិងងាយស្រួលក្នុងការកំណត់ទីតាំង។ នៅក្នុង `Flexbox` នេះគឺយើងមានរបស់ពីរដែលត្រូវសិក្សាគឺ `Parent Element` និង `Child Element` ។
+
+### ចំណុចពិសេសរបស់ CSS Flexbox
+
+- **Flexbox** នៅក្នុង **CSS** គឺអាចធ្វើការបែងចែក `Container` នៅក្នុង គេហទំព័ររបស់អ្នកឲ្យមានលក្ខណះស្តង់ដា រួមបញ្ចូលជាមួយនឹង `Properties` ជាច្រើន ដែលផ្តល់ភាពងាយស្រួលដល់អ្នកនៅពេលដែលអ្នកត្រូវការ ហើយវាក៏ផ្នែកមួយដ៏សំខាន់ក្នុងការធ្វើ `Responsive` ទៅលើគេហទំព័រ។
+
+### Properties របស់ CSS Flexbox
+
+**១. Parent Element**:
+
+- នៅក្នុង `Parent Element` នេះគឺមាន `properties` ជាច្រើនដែលយើងត្រូវសិក្សា ដែលមានដូចខាងក្រោម:
+
+  - **flex-direction**: ប្រើសម្រាប់កំណត់ទិសដៅនៃធាតុដែលវាផ្ទុក។
+
+  - **flex-wrap**: ប្រើសម្រាប់កំណត់ថាតើធាតុដែលវាផ្ទុកគួរចុះបន្ទាត់ឬអត់ នៅពេលដល់កន្លែងទាល់។
+
+  - **flex-flow**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `property` រវាង `flex-direction` និង `flex-wrap` ។
+
+  - **justify-content**: ប្រើសម្រាប់តម្រៀបធាតុទៅតាមទិសដៅនៃទិសដៅគោល។
+
+  - **align-content**: ប្រើសម្រាប់តម្រៀបធាតុទៅតាមទិសដៅដែលកាត់ទិសដៅគោល(សម្រាប់ច្រើនបន្ទាត់)។
+
+  - **place-content**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `properties` រវាង `justify-content` និង `align-content` ។
+
+  - **align-items**: ប្រើសម្រាប់តម្រៀបទៅតាមទិសដៅដែលកាត់ទិសដៅគោល(សម្រាប់មួយបន្ទាត់) ។
+
+**២. Child Element**:
+
+- នៅក្នុង `Child Element` នេះគឺមាន `properties` ជាច្រើនដែលយើងត្រូវសិក្សា ដែលមានដូចខាងក្រោម:
+
+  - **order**: ប្រើសម្រាប់កំណត់លំដាប់។
+
+  - **flex-grow**: ប្រើសម្រាប់ពង្រីកទំហំទៅឲ្យធាតុនូវទំហំដែលនៅសល់។
+
+  - **flex-shrink**: ប្រើសម្រាប់ពង្រួមធាតុ។
+
+  - **flex-basis**: ប្រើសម្រាប់កំណត់ទំហំទៅឲ្យធាតុ។
+
+  - **flex**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `properties` រវាង `flex-grow`, `flex-shrink` និង `flex-basis` ។
+
+  - **align-self**: ប្រើសម្រាប់កំណត់តម្លៃដូច `align-items` ប៉ុន្តែសម្រាប់តែមួយធាតុបច្ចុប្បន្ននេះទេ។
+
+### ឧទាហរណ៍:
+
+- ខាងក្រោមនេះគឺជាឧទាហរណ៍ដែលមាន `Container` ដើម្បីក្តោបនូវ `Content` តូចៗ ហើយនៅក្នុង `Content` តូចៗនោះគឺមាន `Box` តូចៗចំនួនប្រាំបន្ថែមទៀត:
+
+import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
+
+<CssFlexBox/>
+
+<CssFlexBox contentClassName={"content__two"}/>
+
+<CssFlexBox contentClassName={"content__three"}/>
+
+<CssFlexBox contentClassName={"content__four"}/>
+
+<CssFlexBox contentClassName={"content__five"}/>
+
+<CssFlexBox contentClassName={"content__six"}/>
+
+<CssFlexBox contentClassName={"content__seven"}/>
+
+<CssFlexBox contentClassName={"content__eight"}/>
+
+<CssFlexBox contentClassName={"content__nine"}/>
+
+<CssFlexBox contentClassName={"content__ten"}/>
+
+<CssFlexBox contentClassName={"content__eleven"}/>
+
+<CssFlexBox contentClassName={"content__twelve"}/>
+
+<CssFlexBox contentClassName={"content__thirteen"}/>
+
+<CssFlexBox contentClassName={"content__fourteen"}/>
+
+<CssFlexBox contentClassName={"content__fifteen"}/>
+
+<CssFlexBox contentClassName={"content__sixteen"}/>
+
+<CssFlexBox contentClassName={"content__seventeen"}/>
+
+<CssFlexBox contentClassName={"content__eighteenth"}/>
+
+<CssFlexBox contentClassName={"content__nineteen"}/>
+
+<CssFlexBox contentClassName={"content__twenty"}/>
+
+<CssFlexBox contentClassName={"content__twenty__one"}/>
+
+<CssFlexBox contentClassName={"content__twenty__two"}/>
+
+<CssFlexBox contentClassName={"content__twenty__three"}/>
+
+<CssFlexBox contentClassName={"content__twenty__four"}/>
+
+<CssFlexBox contentClassName={"content__twenty__five"}/>
+
+<CssFlexBox contentClassName={"content__twenty__six"}/>
+
+<CssFlexBox contentClassName={"content__twenty__seven"}/>
+
+<CssFlexBox contentClassName={"content__twenty__eight"}/>
+
+<CssFlexBox contentClassName={"content__twenty__nine"}/>
+
+<CssFlexBox contentClassName={"content__thirty"}/>
+
+<CssFlexBox contentClassName={"content__thirty__one"}/>
+
+<CssFlexBox contentClassName={"content__thirty__two"}/>
+
+<CssFlexBox contentClassName={"content__thirty__three"}/>
+
+<CssFlexBox contentClassName={"content__thirty__four"}/>
+
+<CssFlexBox contentClassName={"content__thirty__five"}/>
+
+<CssFlexBox contentClassName={"content__thirty__six"}/>
+
+<CssFlexBox contentClassName={"content__thirty__seven"}/>
+
+<CssFlexBox contentClassName={"content__thirty__eight"}/>

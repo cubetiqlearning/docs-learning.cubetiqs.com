@@ -7,6 +7,9 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
 import styles from "./index.module.css";
 import Translate from "@docusaurus/Translate";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "../components/theme/GlobalStyles";
+import theme from "../components/theme/default";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -30,11 +33,14 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   return (
-    <Layout title={`Home`} description="CUBETIQ Learning are cool">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Layout title={`Home`} description="CUBETIQ Learning are cool">
+        <HomepageHeader />
+        <main>
+          <HomepageFeatures />
+        </main>
+      </Layout>
+    </ThemeProvider>
   );
 }
