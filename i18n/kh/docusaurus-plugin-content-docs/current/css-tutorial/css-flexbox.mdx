@@ -54,7 +54,143 @@ sidebar_position: 2
 
 import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__one">
+    <div class="box box__one"></div>
+    <div class="box box__two"></div>
+    <div class="box box__three"></div>
+    <div class="box box__four"></div>
+    <div class="box box__five"></div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.container{
+    width: 100%;
+    position: relative;
+}
+
+.content{
+  width: 90%;
+  height: 360px;
+  margin: 30px auto;
+  background-color: #6C3483;
+  border-radius: 10px;
+  border: 2px solid #F39C12;
+  padding: 10px;
+}
+
+.box{
+  margin: 10px;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #dedede;
+}
+
+.box__one{
+  background-color: #2ECC71;
+}
+
+.box__two{
+  background-color: #E74C3C;
+}
+
+.box__three{
+  background-color: #5499C7;
+}
+
+.box__four{
+  background-color: #F5B041;
+}
+
+.box__five{
+  background-color: #85929E;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox/>
+
+- ដោយយើងបានឃើញហើយថា នៅក្នុង class `content__one` គឺមិនទាន់មានកំណត់ `style` អ្វីចូលទៅក្នុងនឹងនោះទេ ដូច្នេះលទ្ធផលបង្ហាញចេញមកគឺ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានលក្ខណះធ្លាក់ចុះជាទម្រង់ជួរឈរ។
+
+---
+
+- ខាងក្រោមនេះគឺយើងប្រើ `flexbox` នៅក្នុង class `content__two` ហើយដើម្បីអាចប្រើប្រាស់ `flexbox` គឺយើងប្រើ property `display` ហើយតម្លៃគឺ `flex` គឺមានលក្ខណះបែបនេះ `display: flex;`។
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__two">
+    <div class="box box__one"></div>
+    <div class="box box__two"></div>
+    <div class="box box__three"></div>
+    <div class="box box__four"></div>
+    <div class="box box__five"></div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.container{
+    width: 100%;
+    position: relative;
+}
+
+.content{
+  width: 90%;
+  height: 360px;
+  margin: 30px auto;
+  background-color: #6C3483;
+  border-radius: 10px;
+  border: 2px solid #F39C12;
+  padding: 10px;
+}
+
+.content__two{
+  display: flex;
+}
+
+.box{
+  margin: 10px;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #dedede;
+}
+
+.box__one{
+  background-color: #2ECC71;
+}
+
+.box__two{
+  background-color: #E74C3C;
+}
+
+.box__three{
+  background-color: #5499C7;
+}
+
+.box__four{
+  background-color: #F5B041;
+}
+
+.box__five{
+  background-color: #85929E;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__two"}/>
 
