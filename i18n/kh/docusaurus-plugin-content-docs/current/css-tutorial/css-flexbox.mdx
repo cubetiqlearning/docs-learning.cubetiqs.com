@@ -881,28 +881,462 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 
 ---
 
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__twenty__six">
+    <div class="box box__one">1</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__twenty__six {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox contentClassName={"content__twenty__six"} showBoxOne={true} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__twenty__seven">
+    <div class="box box__one">1</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__twenty__seven {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__twenty__seven"} showBoxOne={true} />
 
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__twenty__eight">
+    <div class="box box__one">1</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__twenty__eight {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox contentClassName={"content__twenty__eight"} showBoxOne={true} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__twenty__nine">
+    <div class="box box__one">1</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__twenty__nine {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__twenty__nine"} showBoxOne={true} />
 
-<CssFlexBox contentClassName={"content__thirty"} showBoxOne={true} showBoxTwo={true} />
+---
 
-<CssFlexBox contentClassName={"content__thirty__one"} showBoxOne={true} showBoxTwo={true} />
+`index.html`
 
-<CssFlexBox contentClassName={"content__thirty__two"} showBoxOne={true} showBoxTwo={true} />
+```html
+<div class="container">
+  <div class="content content__thirty">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+`លទ្ធផល:`
+
+<CssFlexBox
+  contentClassName={"content__thirty"}
+  showBoxOne={true}
+  showBoxTwo={true}
+/>
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__one">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+```
+
+`លទ្ធផល:`
+
+<CssFlexBox
+  contentClassName={"content__thirty__one"}
+  showBoxOne={true}
+  showBoxTwo={true}
+/>
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__two">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+```
+
+`លទ្ធផល:`
+
+<CssFlexBox
+  contentClassName={"content__thirty__two"}
+  showBoxOne={true}
+  showBoxTwo={true}
+/>
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__three">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__three {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__three > .box {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+}
+
+.content__thirty__three > .box__one {
+  order: 5;
+}
+
+.content__thirty__three > .box__two {
+  order: 4;
+}
+
+.content__thirty__three > .box__three {
+  order: 3;
+}
+
+.content__thirty__three > .box__four {
+  order: 2;
+}
+
+.content__thirty__three > .box__five {
+  order: 1;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__thirty__three"} />
 
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__four">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__four {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__four > .box__one {
+  flex-grow: 1;
+}
+
+.content__thirty__four > .box__four {
+  flex-grow: 1;
+}
+
+.content__thirty__four > .box__five {
+  flex-grow: 1;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox contentClassName={"content__thirty__four"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__five">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__five {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__five > .box__one {
+  flex-shrink: 0;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__thirty__five"} />
 
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__six">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__six {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__six > .box__two {
+  flex-basis: 100px;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox contentClassName={"content__thirty__six"} />
 
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__seven">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__seven {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__seven > .box__three {
+  flex: 1 0 500px;
+}
+```
+
+`លទ្ធផល:`
+
 <CssFlexBox contentClassName={"content__thirty__seven"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__thirty__eight">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__thirty__eight {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__thirty__eight > .box__one {
+  align-self: center;
+}
+
+.content__thirty__eight > .box__two {
+  align-self: flex-start;
+}
+
+.content__thirty__eight > .box__three {
+  align-self: flex-end;
+}
+
+.content__thirty__eight > .box__four {
+  align-self: stretch;
+}
+
+.content__thirty__eight > .box__five {
+  align-self: center;
+}
+```
+
+`លទ្ធផល:`
 
 <CssFlexBox contentClassName={"content__thirty__eight"} />
