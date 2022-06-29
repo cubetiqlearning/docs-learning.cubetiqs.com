@@ -25,6 +25,13 @@ interface CssFlexBoxProps {
 
   // for className
   contentClassName?: string;
+
+  // for hidden
+  showBoxOne?: boolean;
+  showBoxTwo?: boolean;
+  showBoxThree?: boolean;
+  showBoxFour?: boolean;
+  showBoxFive?: boolean;
 }
 
 const Container = styled.div<CssFlexBoxProps>`
@@ -390,17 +397,43 @@ const Container = styled.div<CssFlexBoxProps>`
 `;
 
 const CssFlexBox: React.FC<CssFlexBoxProps> = (props) => {
-  const { contentClassName, ...rest } = props;
+  const {
+    contentClassName,
+    showBoxOne,
+    showBoxTwo,
+    showBoxThree,
+    showBoxFour,
+    showBoxFive,
+    ...rest
+  } = props;
 
   return (
-    <Container>
-      <div className={`content ${contentClassName || "content__one"}`}>
-        <div className="box box__one"></div>
-        <div className="box box__two"></div>
-        <div className="box box__three"></div>
-        <div className="box box__four"></div>
-        <div className="box box__five"></div>
-      </div>
+    <Container {...rest}>
+      {!showBoxOne &&
+      !showBoxTwo &&
+      !showBoxThree &&
+      !showBoxFour &&
+      !showBoxFive ? (
+        <div className={`content ${contentClassName || "content__one"}`}>
+          <div className="box box__one">1</div>
+          <div className="box box__two">2</div>
+          <div className="box box__three">3</div>
+          <div className="box box__four">4</div>
+          <div className="box box__five">5</div>
+        </div>
+      ) : (
+        <div className={`content ${contentClassName || "content__one"}`}>
+          {showBoxOne && <div className="box box__one">1</div>}
+
+          {showBoxTwo && <div className="box box__two">2</div>}
+
+          {showBoxThree && <div className="box box__three">3</div>}
+
+          {showBoxFour && <div className="box box__four">4</div>}
+
+          {showBoxFive && <div className="box box__five">5</div>}
+        </div>
+      )}
     </Container>
   );
 };

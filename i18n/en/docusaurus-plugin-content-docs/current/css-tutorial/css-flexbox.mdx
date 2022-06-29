@@ -7,3 +7,378 @@ sidebar_position: 2
 ### What is CSS Flexbox?
 
 - **CSS Flexbox** is used to define each element to be beautiful and easy to position. In this Flexbox, we have two things to study: `Parent Element` and `Child Element`.
+
+### ចំណុចពិសេសរបស់ CSS Flexbox
+
+- **Flexbox** នៅក្នុង **CSS** គឺអាចធ្វើការបែងចែក `Container` នៅក្នុង គេហទំព័ររបស់អ្នកឲ្យមានលក្ខណះស្តង់ដា រួមបញ្ចូលជាមួយនឹង `Properties` ជាច្រើន ដែលផ្តល់ភាពងាយស្រួលដល់អ្នកនៅពេលដែលអ្នកត្រូវការ ហើយវាក៏ផ្នែកមួយដ៏សំខាន់ក្នុងការធ្វើ `Responsive` ទៅលើគេហទំព័រ។
+
+### Properties របស់ CSS Flexbox
+
+**1. Parent Element**:
+
+- នៅក្នុង `Parent Element` នេះគឺមាន `properties` ជាច្រើនដែលយើងត្រូវសិក្សា ដែលមានដូចខាងក្រោម:
+
+  - **flex-direction**: ប្រើសម្រាប់កំណត់ទិសដៅនៃធាតុដែលវាផ្ទុក។
+
+  - **flex-wrap**: ប្រើសម្រាប់កំណត់ថាតើធាតុដែលវាផ្ទុកគួរចុះបន្ទាត់ឬអត់ នៅពេលដល់កន្លែងទាល់។
+
+  - **flex-flow**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `property` រវាង `flex-direction` និង `flex-wrap` ។
+
+  - **justify-content**: ប្រើសម្រាប់តម្រៀបធាតុទៅតាមទិសដៅនៃទិសដៅគោល។
+
+  - **align-content**: ប្រើសម្រាប់តម្រៀបធាតុទៅតាមទិសដៅដែលកាត់ទិសដៅគោល(សម្រាប់ច្រើនបន្ទាត់)។
+
+  - **place-content**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `properties` រវាង `justify-content` និង `align-content` ។
+
+  - **align-items**: ប្រើសម្រាប់តម្រៀបទៅតាមទិសដៅដែលកាត់ទិសដៅគោល(សម្រាប់មួយបន្ទាត់) ។
+
+**2. Child Element**:
+
+- នៅក្នុង `Child Element` នេះគឺមាន `properties` ជាច្រើនដែលយើងត្រូវសិក្សា ដែលមានដូចខាងក្រោម:
+
+  - **order**: ប្រើសម្រាប់កំណត់លំដាប់។
+
+  - **flex-grow**: ប្រើសម្រាប់ពង្រីកទំហំទៅឲ្យធាតុនូវទំហំដែលនៅសល់។
+
+  - **flex-shrink**: ប្រើសម្រាប់ពង្រួមធាតុ។
+
+  - **flex-basis**: ប្រើសម្រាប់កំណត់ទំហំទៅឲ្យធាតុ។
+
+  - **flex**: ប្រើសម្រាប់សរសេរតែក្នុងមួយ `properties` រវាង `flex-grow`, `flex-shrink` និង `flex-basis` ។
+
+  - **align-self**: ប្រើសម្រាប់កំណត់តម្លៃដូច `align-items` ប៉ុន្តែសម្រាប់តែមួយធាតុបច្ចុប្បន្ននេះទេ។
+
+### ឧទាហរណ៍:
+
+import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__one">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  width: 90%;
+  height: 360px;
+  margin: 30px auto;
+  background-color: #6c3483;
+  border-radius: 10px;
+  border: 2px solid #f39c12;
+  padding: 10px;
+}
+
+.box {
+  margin: 10px;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #dedede;
+}
+
+.box__one {
+  background-color: #2ecc71;
+}
+
+.box__two {
+  background-color: #e74c3c;
+}
+
+.box__three {
+  background-color: #5499c7;
+}
+
+.box__four {
+  background-color: #f5b041;
+}
+
+.box__five {
+  background-color: #85929e;
+}
+```
+
+`Result:`
+
+<CssFlexBox />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__two">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__two {
+  display: flex;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__two"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__three">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__three {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__three"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__four">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__four {
+  display: flex;
+  flex-direction: row;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__four"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__five">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__five {
+  display: flex;
+  flex-direction: column-reverse;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__five"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__six">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__six {
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__six"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__seven">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__seven {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__seven"} />
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__eight">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__eight {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+```
+
+`Result:`
+
+<CssFlexBox contentClassName={"content__eight"} />
+
+---
+
+<CssFlexBox contentClassName={"content__nine"} />
+
+<CssFlexBox contentClassName={"content__ten"} />
+
+<CssFlexBox contentClassName={"content__eleven"} />
+
+<CssFlexBox contentClassName={"content__twelve"} />
+
+<CssFlexBox contentClassName={"content__thirteen"} />
+
+<CssFlexBox contentClassName={"content__fourteen"} />
+
+<CssFlexBox contentClassName={"content__fifteen"} />
+
+<CssFlexBox contentClassName={"content__sixteen"} />
+
+<CssFlexBox contentClassName={"content__seventeen"} />
+
+<CssFlexBox contentClassName={"content__eighteenth"} />
+
+<CssFlexBox contentClassName={"content__nineteen"} />
+
+<CssFlexBox contentClassName={"content__twenty"} />
+
+<CssFlexBox contentClassName={"content__twenty__one"} />
+
+<CssFlexBox contentClassName={"content__twenty__two"} />
+
+<CssFlexBox contentClassName={"content__twenty__three"} />
+
+<CssFlexBox contentClassName={"content__twenty__four"} />
+
+<CssFlexBox contentClassName={"content__twenty__five"} />
+
+<CssFlexBox contentClassName={"content__twenty__six"} />
+
+<CssFlexBox contentClassName={"content__twenty__seven"} />
+
+<CssFlexBox contentClassName={"content__twenty__eight"} />
+
+<CssFlexBox contentClassName={"content__twenty__nine"} />
+
+<CssFlexBox contentClassName={"content__thirty"} />
+
+<CssFlexBox contentClassName={"content__thirty__one"} />
+
+<CssFlexBox contentClassName={"content__thirty__two"} />
+
+<CssFlexBox contentClassName={"content__thirty__three"} />
+
+<CssFlexBox contentClassName={"content__thirty__four"} />
+
+<CssFlexBox contentClassName={"content__thirty__five"} />
+
+<CssFlexBox contentClassName={"content__thirty__six"} />
+
+<CssFlexBox contentClassName={"content__thirty__seven"} />
+
+<CssFlexBox contentClassName={"content__thirty__eight"} />
