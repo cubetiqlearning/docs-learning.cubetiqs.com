@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # CSS - Flexbox
 
-### What is CSS Flexbox?
+### អ្វីទៅជា CSS Flexbox?
 
 - **CSS Flexbox** គឺប្រើសម្រាប់កំណត់ធាតុនីមួយៗឲ្យមានភាពស្រស់ស្អាតនិងងាយស្រួលក្នុងការកំណត់ទីតាំង។ នៅក្នុង `Flexbox` នេះគឺយើងមានរបស់ពីរដែលត្រូវសិក្សាគឺ `Parent Element` និង `Child Element` ។
 
@@ -59,11 +59,11 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 ```html
 <div class="container">
   <div class="content content__one">
-    <div class="box box__one"></div>
-    <div class="box box__two"></div>
-    <div class="box box__three"></div>
-    <div class="box box__four"></div>
-    <div class="box box__five"></div>
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
   </div>
 </div>
 ```
@@ -71,22 +71,22 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 `style.css`
 
 ```css
-.container{
-    width: 100%;
-    position: relative;
+.container {
+  width: 100%;
+  position: relative;
 }
 
-.content{
+.content {
   width: 90%;
   height: 360px;
   margin: 30px auto;
-  background-color: #6C3483;
+  background-color: #6c3483;
   border-radius: 10px;
-  border: 2px solid #F39C12;
+  border: 2px solid #f39c12;
   padding: 10px;
 }
 
-.box{
+.box {
   margin: 10px;
   width: 45%;
   height: 45px;
@@ -94,30 +94,30 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
   border: 2px solid #dedede;
 }
 
-.box__one{
-  background-color: #2ECC71;
+.box__one {
+  background-color: #2ecc71;
 }
 
-.box__two{
-  background-color: #E74C3C;
+.box__two {
+  background-color: #e74c3c;
 }
 
-.box__three{
-  background-color: #5499C7;
+.box__three {
+  background-color: #5499c7;
 }
 
-.box__four{
-  background-color: #F5B041;
+.box__four {
+  background-color: #f5b041;
 }
 
-.box__five{
-  background-color: #85929E;
+.box__five {
+  background-color: #85929e;
 }
 ```
 
 `លទ្ធផល:`
 
-<CssFlexBox/>
+<CssFlexBox />
 
 - ដោយយើងបានឃើញហើយថា នៅក្នុង class `content__one` គឺមិនទាន់មានកំណត់ `style` អ្វីចូលទៅក្នុងនឹងនោះទេ ដូច្នេះលទ្ធផលបង្ហាញចេញមកគឺ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានលក្ខណះធ្លាក់ចុះជាទម្រង់ជួរឈរ។
 
@@ -130,11 +130,11 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 ```html
 <div class="container">
   <div class="content content__two">
-    <div class="box box__one"></div>
-    <div class="box box__two"></div>
-    <div class="box box__three"></div>
-    <div class="box box__four"></div>
-    <div class="box box__five"></div>
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
   </div>
 </div>
 ```
@@ -142,126 +142,267 @@ import CssFlexBox from "@site/src/components/CssFlexBoxFeatures";
 `style.css`
 
 ```css
-.container{
-    width: 100%;
-    position: relative;
-}
-
-.content{
-  width: 90%;
-  height: 360px;
-  margin: 30px auto;
-  background-color: #6C3483;
-  border-radius: 10px;
-  border: 2px solid #F39C12;
-  padding: 10px;
-}
-
-.content__two{
+.content__two {
   display: flex;
-}
-
-.box{
-  margin: 10px;
-  width: 45%;
-  height: 45px;
-  border-radius: 10px;
-  border: 2px solid #dedede;
-}
-
-.box__one{
-  background-color: #2ECC71;
-}
-
-.box__two{
-  background-color: #E74C3C;
-}
-
-.box__three{
-  background-color: #5499C7;
-}
-
-.box__four{
-  background-color: #F5B041;
-}
-
-.box__five{
-  background-color: #85929E;
 }
 ```
 
 `លទ្ធផល:`
 
-<CssFlexBox contentClassName={"content__two"}/>
+<CssFlexBox contentClassName={"content__two"} />
 
-<CssFlexBox contentClassName={"content__three"}/>
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__two` គឺមានការកំណត់ `style` ចំនួនមួយ​ `property` គឺ `display: flex;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានលក្ខណះឡើងលើជាទម្រង់ជួរដេកវិញ។
 
-<CssFlexBox contentClassName={"content__four"}/>
+---
 
-<CssFlexBox contentClassName={"content__five"}/>
+- ខាងក្រោមនេះគឺយើងប្រើ `flexbox` ដើម្បីកំណត់ទិសដៅទៅឲ្យ `boxes` ទាំងអស់នៅក្នុង class `content__three` ហើយដើម្បីអាចកំណត់ទិសដៅបាន យើងអាចប្រើប្រាស់នូវ property `flex-direction` ហើយមានតម្លៃជាច្រើនដែលមានដូច​ជា `column`, `row`, `column-reverse`,​ និង​ `row-reverse` ។
 
-<CssFlexBox contentClassName={"content__six"}/>
+`index.html`
 
-<CssFlexBox contentClassName={"content__seven"}/>
+```html
+<div class="container">
+  <div class="content content__three">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
 
-<CssFlexBox contentClassName={"content__eight"}/>
+`style.css`
 
-<CssFlexBox contentClassName={"content__nine"}/>
+```css
+.content__three {
+  display: flex;
+  flex-direction: column;
+}
+```
 
-<CssFlexBox contentClassName={"content__ten"}/>
+`លទ្ធផល:`
 
-<CssFlexBox contentClassName={"content__eleven"}/>
+<CssFlexBox contentClassName={"content__three"} />
 
-<CssFlexBox contentClassName={"content__twelve"}/>
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__three` គឺមានការកំណត់ `style` ចំនួនមួយ​ `property` បន្ថែមទៀតគឺ `flex-direction: column;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានទិសដៅជាលក្ខណះធ្លាក់ចុះជាទម្រង់ជួរឈរវិញ។
 
-<CssFlexBox contentClassName={"content__thirteen"}/>
+---
 
-<CssFlexBox contentClassName={"content__fourteen"}/>
+`index.html`
 
-<CssFlexBox contentClassName={"content__fifteen"}/>
+```html
+<div class="container">
+  <div class="content content__four">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
 
-<CssFlexBox contentClassName={"content__sixteen"}/>
+`style.css`
 
-<CssFlexBox contentClassName={"content__seventeen"}/>
+```css
+.content__four {
+  display: flex;
+  flex-direction: row;
+}
+```
 
-<CssFlexBox contentClassName={"content__eighteenth"}/>
+`លទ្ធផល:`
 
-<CssFlexBox contentClassName={"content__nineteen"}/>
+<CssFlexBox contentClassName={"content__four"} />
 
-<CssFlexBox contentClassName={"content__twenty"}/>
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__four` គឺមានការកំណត់ `style property` ដដែលតែមានការផ្លាស់ប្តូរតម្លៃគឺ `flex-direction: row;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានទិសដៅជាលក្ខណះឡើងលើជាទម្រង់ជួរដេកវិញ។
 
-<CssFlexBox contentClassName={"content__twenty__one"}/>
+---
 
-<CssFlexBox contentClassName={"content__twenty__two"}/>
+`index.html`
 
-<CssFlexBox contentClassName={"content__twenty__three"}/>
+```html
+<div class="container">
+  <div class="content content__five">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
 
-<CssFlexBox contentClassName={"content__twenty__four"}/>
+`style.css`
 
-<CssFlexBox contentClassName={"content__twenty__five"}/>
+```css
+.content__five {
+  display: flex;
+  flex-direction: column-reverse;
+}
+```
 
-<CssFlexBox contentClassName={"content__twenty__six"}/>
+`លទ្ធផល:`
 
-<CssFlexBox contentClassName={"content__twenty__seven"}/>
+<CssFlexBox contentClassName={"content__five"} />
 
-<CssFlexBox contentClassName={"content__twenty__eight"}/>
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__five` គឺមានការកំណត់ `style property` ដដែលតែមានការផ្លាស់ប្តូរតម្លៃគឺ `flex-direction: column-reverse;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានទិសដៅជាលក្ខណះធ្លាក់ចុះជាទម្រង់ជួរឈរបែបបញ្ច្រាស់ទៅវិញ។
 
-<CssFlexBox contentClassName={"content__twenty__nine"}/>
+---
 
-<CssFlexBox contentClassName={"content__thirty"}/>
+`index.html`
 
-<CssFlexBox contentClassName={"content__thirty__one"}/>
+```html
+<div class="container">
+  <div class="content content__six">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
 
-<CssFlexBox contentClassName={"content__thirty__two"}/>
+`style.css`
 
-<CssFlexBox contentClassName={"content__thirty__three"}/>
+```css
+.content__six {
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
 
-<CssFlexBox contentClassName={"content__thirty__four"}/>
+`លទ្ធផល:`
 
-<CssFlexBox contentClassName={"content__thirty__five"}/>
+<CssFlexBox contentClassName={"content__six"} />
 
-<CssFlexBox contentClassName={"content__thirty__six"}/>
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__six` គឺមានការកំណត់ `style property` ដដែលតែមានការផ្លាស់ប្តូរតម្លៃគឺ `flex-direction: row-reverse;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានទិសដៅជាលក្ខណះឡើងលើជាទម្រង់ជួរដេកបែបបញ្ច្រាស់ទៅវិញ។
 
-<CssFlexBox contentClassName={"content__thirty__seven"}/>
+---
 
-<CssFlexBox contentClassName={"content__thirty__eight"}/>
+- ខាងក្រោមនេះគឺយើងប្រើ `flexbox` ដើម្បីកំណត់ការចុះបន្ទាត់របស់ `boxes` ទាំងអស់នៅក្នុង class `content__seven` ហើយដើម្បីអាចកំណត់ការចុះបន្ទាត់បាន យើងអាចប្រើប្រាស់នូវ property `flex-wrap` ហើយមានតម្លៃជាច្រើនដែលមានដូច​ជា `wrap`, `nowrap`, និង `wrap-reverse` ។
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__seven">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__seven {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+```
+
+`លទ្ធផល:`
+
+<CssFlexBox contentClassName={"content__seven"} />
+
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__seven` គឺមានការកំណត់ `style` ចំនួនមួយ `property` បន្ថែមទៀតគឺ `flex-wrap: wrap;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានលក្ខណះចុះបន្ទាត់។
+
+---
+
+`index.html`
+
+```html
+<div class="container">
+  <div class="content content__eight">
+    <div class="box box__one">1</div>
+    <div class="box box__two">2</div>
+    <div class="box box__three">3</div>
+    <div class="box box__four">4</div>
+    <div class="box box__five">5</div>
+  </div>
+</div>
+```
+
+`style.css`
+
+```css
+.content__eight{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+```
+
+`លទ្ធផល:`
+
+<CssFlexBox contentClassName={"content__eight"} />
+
+- ដោយយើងបានឃើញហើយថានៅក្នុង class `content__eight` គឺមានការកំណត់ `style property` ដដែលតែមានការផ្លាស់ប្តូរតម្លៃគឺ `flex-wrap: wrap-reverse;` ដូច្នេះ `boxes` ទាំងអស់នៅក្នុង `content` គឺមានលក្ខណះចុះបន្ទាត់បែបជាបញ្ច្រាស់ទៅវិញ។
+
+--- 
+
+<CssFlexBox contentClassName={"content__nine"} />
+
+<CssFlexBox contentClassName={"content__ten"} />
+
+<CssFlexBox contentClassName={"content__eleven"} />
+
+<CssFlexBox contentClassName={"content__twelve"} />
+
+<CssFlexBox contentClassName={"content__thirteen"} />
+
+<CssFlexBox contentClassName={"content__fourteen"} />
+
+<CssFlexBox contentClassName={"content__fifteen"} />
+
+<CssFlexBox contentClassName={"content__sixteen"} />
+
+<CssFlexBox contentClassName={"content__seventeen"} />
+
+<CssFlexBox contentClassName={"content__eighteenth"} />
+
+<CssFlexBox contentClassName={"content__nineteen"} />
+
+<CssFlexBox contentClassName={"content__twenty"} />
+
+<CssFlexBox contentClassName={"content__twenty__one"} />
+
+<CssFlexBox contentClassName={"content__twenty__two"} />
+
+<CssFlexBox contentClassName={"content__twenty__three"} />
+
+<CssFlexBox contentClassName={"content__twenty__four"} />
+
+<CssFlexBox contentClassName={"content__twenty__five"} />
+
+<CssFlexBox contentClassName={"content__twenty__six"} />
+
+<CssFlexBox contentClassName={"content__twenty__seven"} />
+
+<CssFlexBox contentClassName={"content__twenty__eight"} />
+
+<CssFlexBox contentClassName={"content__twenty__nine"} />
+
+<CssFlexBox contentClassName={"content__thirty"} />
+
+<CssFlexBox contentClassName={"content__thirty__one"} />
+
+<CssFlexBox contentClassName={"content__thirty__two"} />
+
+<CssFlexBox contentClassName={"content__thirty__three"} />
+
+<CssFlexBox contentClassName={"content__thirty__four"} />
+
+<CssFlexBox contentClassName={"content__thirty__five"} />
+
+<CssFlexBox contentClassName={"content__thirty__six"} />
+
+<CssFlexBox contentClassName={"content__thirty__seven"} />
+
+<CssFlexBox contentClassName={"content__thirty__eight"} />
