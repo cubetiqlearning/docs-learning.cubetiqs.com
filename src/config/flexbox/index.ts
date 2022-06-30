@@ -8,7 +8,7 @@ const FlexBoxConfig = {
   boxThreeBackgroundColor: "#5499C7",
   boxFourBackgroundColor: "#F5B041",
   boxFiveBackgroundColor: "#85929E",
-  contentWidth: "90%",
+  contentWidth: "100%",
   contentHeight: "360px",
   contentMargin: "30px auto",
   contentPadding: "10px",
