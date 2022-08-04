@@ -13,10 +13,18 @@
   },
   "sidebar.tutorialSidebar.category.CSS Tutorial": {
     "message": "មេរៀន​ CSS",
-    "description": "The label for category Spring Boot + Kotlin Tutorial in sidebar tutorialSidebar"
+    "description": "The label for category CSS Tutorial in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.CSS Tutorial.link.generated-index.description": {
     "message": "ចំណាយពេល ៥ នាទីដើម្បីយល់ដឹងពីមាតិកា។",
-    "description": "The generated-index page description for category Spring Boot Kotlin Tutorial in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category CSS Tutorial in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Docker Tutorial": {
+    "message": "មេរៀន​ Docker",
+    "description": "The label for category Docker Tutorial in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Docker Tutorial.link.generated-index.description": {
+    "message": "ចំណាយពេល ៥ នាទីដើម្បីយល់ដឹងពីមាតិកា។",
+    "description": "The generated-index page description for category Docker Tutorial in sidebar tutorialSidebar"
   }
 }
