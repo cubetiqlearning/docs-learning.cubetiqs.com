@@ -1,6 +1,6 @@
 # CUBETIQ Learning Docs
 
-🤝 Enjoy with our tutorial: [CUBETIQ Learning](docs-learning-cubetiqs-com.vercel.app)
+🤝 Enjoy with our tutorial: [CUBETIQ Learning](https://docs-learning-cubetiqs-com.vercel.app)
 
 ## Contributors
 
