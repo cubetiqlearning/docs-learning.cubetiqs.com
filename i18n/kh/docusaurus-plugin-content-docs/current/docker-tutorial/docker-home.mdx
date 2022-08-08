@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 import CountYearComponent from "@site/src/components/SharedFeatures/CountYearComponent.tsx";
+import TableComponent from "@site/src/components/SharedFeatures/table";
 
 # Docker - ទំព័រដើម
 
@@ -18,7 +19,7 @@ import CountYearComponent from "@site/src/components/SharedFeatures/CountYearCom
 
 ### អ្វីទៅជា Docker Container?
 
-- **Docker Container** ជា `virtual machine` ដែលមានលក្ខណះ `lightweight` ។ វាអនុញ្ញាតឲ្យអ្នកអភិវឌ្ឍអាចវេចខ្ចប់នូវកម្មវិធីដែលរួមបញ្ចូលនូវ `libraries` និង `dependencies` ទាំងអស់ដែលពាក់ព័ន្ធជាមួយនឹងកម្មវិធី, ហើយដឹកតាមនាវាជាលក្ខណះកញ្ចប់មួយៗ។ 
+- **Docker Container** ជា `virtual machine` ដែលមានលក្ខណះ `lightweight` ។ វាអនុញ្ញាតឲ្យអ្នកអភិវឌ្ឍអាចវេចខ្ចប់នូវកម្មវិធីដែលរួមបញ្ចូលនូវ `libraries` និង `dependencies` ទាំងអស់ដែលពាក់ព័ន្ធជាមួយនឹងកម្មវិធី, ហើយដឹកតាមនាវាជាលក្ខណះកញ្ចប់មួយៗ។
 
 ![Docker Container](/img/docs/docker-container.jpg)
 
@@ -26,4 +27,29 @@ import CountYearComponent from "@site/src/components/SharedFeatures/CountYearCom
 
 ### អ្វីទៅជា Virtual Machine?
 
+- **Virtual Machine** ជាកម្មវិធីដែលអនុញ្ញាតឲ្យយើងអាចធ្វើការទាញយកនិងប្រើប្រាស់នូវប្រព័ន្ធប្រតិបត្តិការផ្សេងៗ(`Windows`, `Linux`, និង `Debian`) នៅក្នុងពេលដំណាលគ្នានៅលើម៉ាស៊ីនរបស់យើង។ ប្រព័ន្ធប្រតិបត្តិការដែល `virtual machine` កំពុងដំណើរការគឺគេហៅថា `virtualized operating systems` ។ **Virtualized Operating Systems** ទាំងអស់នេះគឺអាចប្រតិបត្តិនូវកម្មវិធីនិងបំពេញភារកិច្ចដូចប្រព័ន្ធប្រតិបត្តិការពិតៗអញ្ចឹង។
 
+### Containers Vs. Virtual Machine
+
+<TableComponent>
+    <thead>
+        <tr>
+            <th>Container</th>
+            <th>Virtual Machine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Container គឺលឿនហើយមានតម្លៃថោក។</td>
+            <td>Virtual Machine គឺយឺតហើយមានតម្លៃថ្លៃ។</td>
+        </tr>
+        <tr>
+            <td>គ្មានការខ្ជះខ្ជាយ memory ។</td>
+            <td>ខ្ជះខ្ជាយ memory ។</td>
+        </tr>
+        <tr>
+            <td>វាប្រើប្រាស់ kernel ដូចគ្នា ប៉ុន្តែ distribution ខុសគ្នា។</td>
+            <td>វាប្រើប្រាស់ប្រព័ន្ធប្រតិបត្តិឯករាជ្យជាច្រើន។</td>
+        </tr>
+    </tbody>
+</TableComponent>
