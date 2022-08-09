@@ -32,24 +32,39 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 ### Containers Vs. Virtual Machine
 
 <TableComponent>
-    <thead>
-        <tr>
-            <th>Container</th>
-            <th>Virtual Machine</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Container គឺលឿនហើយមានតម្លៃថោក។</td>
-            <td>Virtual Machine គឺយឺតហើយមានតម្លៃថ្លៃ។</td>
-        </tr>
-        <tr>
-            <td>គ្មានការខ្ជះខ្ជាយ memory ។</td>
-            <td>ខ្ជះខ្ជាយ memory ។</td>
-        </tr>
-        <tr>
-            <td>វាប្រើប្រាស់ kernel ដូចគ្នា ប៉ុន្តែ distribution ខុសគ្នា។</td>
-            <td>វាប្រើប្រាស់ប្រព័ន្ធប្រតិបត្តិឯករាជ្យជាច្រើន។</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Container</th>
+      <th>Virtual Machine</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Container គឺលឿនហើយមានតម្លៃថោក។</td>
+      <td>Virtual Machine គឺយឺតហើយមានតម្លៃថ្លៃ។</td>
+    </tr>
+    <tr>
+      <td>គ្មានការខ្ជះខ្ជាយ memory ។</td>
+      <td>ខ្ជះខ្ជាយ memory ។</td>
+    </tr>
+    <tr>
+      <td>វាប្រើប្រាស់ kernel ដូចគ្នា ប៉ុន្តែ distribution ខុសគ្នា។</td>
+      <td>វាប្រើប្រាស់ប្រព័ន្ធប្រតិបត្តិឯករាជ្យជាច្រើន។</td>
+    </tr>
+  </tbody>
 </TableComponent>
+
+### ហេតុអ្វីត្រូវប្រើ Docker?
+
+![Why Docker](/img/docs/why-docker.jpg)
+
+- **Docker** ត្រូវបានរចនាឡើងដើម្បីជាអត្ថប្រយោជន៍សម្រាប់អ្នកអភិវឌ្ឍនិងអ្នកគ្រប់គ្រងប្រព័ន្ធ។ ហេតុផលដែលអ្នកគួរប្រើ **Docker** គឺមានដូចខាងក្រោម:
+  - **Docker** អនុញ្ញាតឲ្យយើងងាយស្រួលក្នុងការដំឡើងនិងដំណើរការ `software` ដោយមិនចាំបាច់ខ្វាយខ្វល់អំពីការរៀបចំនិង `dependencies` អីនោះទេ។
+  - **Developers** ប្រើប្រាស់ **Docker** ដើម្បីលុបបំបាត់បញ្ហាម៉ាស៊ីន ពោលគឺនៅពេលដែលយើងដំណើរការកម្មវិធីនៅលើ **Docker** គឺវាមានភាព `lightweight` ជាងការដំណើរការកម្មវិធីដោយផ្ទាល់។
+  - **Operators** ប្រើប្រាស់ **Docker** សម្រាប់ដំណើរការនិងគ្រប់គ្រងកម្មវិធីនៅក្នុង `containers` ឲ្យដាច់ដោយឡែកពីគ្នា ដើម្បីងាយស្រួលក្នុងការគណនាបរិមាណ។
+  - **Enterprises** ប្រើប្រាស់ **Docker** សម្រាប់បង្កើតឡើងនូវ `software delivery pipelines` ដែលប្រកបទៅដោយសុវត្ថិភាព ដើម្បីបញ្ចូនមុខងារកម្មវិធីថ្មីឲ្យមានភាពឆាប់រហ័សនិងមានសុវត្ថិភាព។
+
+### គុណសម្បត្តិរបស់ Docker
+
+- គុណសម្បត្តិរបស់ Docker គឺមានដូចខាងក្រោម៖
+    - 
