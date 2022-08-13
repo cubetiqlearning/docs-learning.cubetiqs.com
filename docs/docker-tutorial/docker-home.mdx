@@ -2,41 +2,91 @@
 sidebar_position: 1
 ---
 
+import CountYearComponent from "@site/src/components/SharedFeatures/CountYearComponent.tsx";
+import TableComponent from "@site/src/components/SharedFeatures/table";
+
 # Docker - Home
 
-### What is Spring Boot?
+### What is Docker?
 
-- **Spring Boot** is a Bootstraping of Spring Project and Spring is a Java language framework used to code and create Web Applications.
+- In simple terms, **Docker** is a program that simplifies the process of creating, managing, and distributing applications. It does this by enabling all computer operating systems to download and run any program with ease and without much configuration.
 
-### What is Kotlin?
+- **Docker** uses a `container` to connect to a computer's operating system to execute programs. It allows applications to use the same `Linux kernel` as a `system` built into a computer, rather than creating an entire `virtual operating system`.
 
-- **Kotlin** is a new open source programming language similar to **Java** and **JavaScript**. It is a rich language that brings together many functions in one place. Kotlin currently runs on JVMs.
+- **Docker** was created by `Kamel Founadi`, `Solomon Hykes` and `Sebastien Pahl` and uses the `Golang Programming Language`. **Docker** has been around for <CountYearComponent startYear={2013} /> years now, as of March 20, 2013.
 
-### Prerequisites for Spring Boot + Kotlin
+- **Docker** integrates with many components such as **Docker client**, **Docker server**, **Docker machine**, **Docker hub**, **Docker composes**, etc.
 
-- Before you can learn Spring Boot, you need to have knowledge about Spring Framework. And you should also have knowledge related to Frontend (HTML, CSS, JavaScript), Framework or Library such as React, Angular, Vue ... as well, because Spring is a Framework that we use in the Backend.
+### What is a Docker Container?
 
-### Features of Spring Boot + Kotlin
+- **Docker Container** is a `lightweight virtual machine`. It allows developers to package software that includes all the `libraries` and `dependencies` associated with the application, and ship it individually as a package.
 
-- **Core technologies** include dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP, etc.
+![Docker Container](/img/docs/docker-container.jpg)
 
-- **Spring MVC** - MVC is a Model View Controller. Model is used to create a table in the Database and has a lot of communication with the Database, and View is like designing a website by coding HTML, CSS and JavaScript, and the Controller is used to create a relationship between Model and View. This means that the server interacts with the client.
+- The advantage of using a `docker container` is that you do not need to allocate `RAM` and `disk` space to execute any program, it will automatically generate storage and space according to the requirements of the program.
 
-- **Hibernate & JPA** is a feature of the Java language that provides specific functionality and standardization to ORM (Object Relational Mapping), a tool that simplifies data generation, data processing, and coding. Is a coding technique to integrate an Object and a Data Store into a database).
+### What is a Virtual Machine?
 
-- **Spring Security** is a framework in the Spring language used to control authentication and authorization.
+- **Virtual Machine** is a program that allows us to download and use different operating systems (`Windows`, `Linux`, and `Debian`) at the same time on our machine. The operating system on which the `virtual machine` is running is called `virtualized operating systems`. All of these **Virtualized Operating Systems** are able to execute applications and perform tasks like real operating systems.
 
-### Additional help
+![Virtual Machine](/img/docs/virtual-machine.jpg)
 
-- To learn more about this tutorial, you should watch some Spring Boot Crush Course videos to help you learn more.
+### Containers Vs. Virtual Machine
 
-<iframe
-  style={{ aspectRatio: '16 / 9', width: '100%' }}
-  src="https://www.youtube.com/embed/9SGDpanrc8U"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+<TableComponent>
+  <thead>
+    <tr>
+      <th>Container</th>
+      <th>Virtual Machine</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Integration in a container is faster and cheap.</td>
+      <td>Integration in virtual is slow and costly.</td>
+    </tr>
+    <tr>
+      <td>No wastage of memory.</td>
+      <td>Wastage of memory.</td>
+    </tr>
+    <tr>
+      <td>It uses the same kernel, but different distribution.</td>
+      <td>It uses multiple independent operating systems.</td>
+    </tr>
+  </tbody>
+</TableComponent>
 
-- **Note**: The video above focuses on using Spring Boot with Java, so Java is not much different from Kotlin, so you can learn how to use Spring Boot with Kotlin in this tutorial.
+### Why use Docker?
+
+![Why Docker](/img/docs/why-docker.jpg)
+
+- **Docker** is designed to benefit both the Developer and System Administrator. There are the following reasons to use **Docker**:
+  - **Docker** allows us to easily install and run `software` without worrying about setup or `dependencies`.
+  - **Developers** use **Docker** to eliminate machine problems, that is, when we run programs on Docker, it is lighterweight than running programs directly.
+  - **Operators** use **Docker** to run and manage apps in isolated `containers` for better compute density.
+  - **Enterprises** use **Docker** to securely built agile `software delivery pipelines` to ship new application features faster and more securely.
+
+### Advantages of Docker
+
+- The advantages of **Docker** are as follows:
+  - It uses less `memory`.
+  - It provides `lightweight virtualization`.
+  - It does not a require full operating system to run applications.
+  - It allows you to use a `remote repository` to share your `container` with others.
+
+### Disadvantages of Docker
+
+- The disadvantages of **Docker** are as follows:
+  - It increases complexity due to an additional layer.
+  - In **Docker**, it is difficult to manage large amount of `containers`.
+  - Some features such as `container self-registration`, `containers self-inspects`, copying files form `host` to the `container`, and more are missing in the `Docker`.
+  - **Docker** is not a good solution for applications that require `rich graphical interface`.
+
+### Docker Engine
+
+- It is a `client server application` that contains the following major components:
+  - A `server` which is a type of long-running program called a `daemon process`.
+  - The `REST API` is used to specify interfaces that programs can use to talk to the `daemon` and instruct it what to do.
+  - The `client` has a `command line interface` for submitting commands to the `server`.
+
+![Docker Engine](/img/docs/docker-engine.jpg)
