@@ -29,6 +29,8 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 - **Virtual Machine** ជាកម្មវិធីដែលអនុញ្ញាតឲ្យយើងអាចធ្វើការទាញយកនិងប្រើប្រាស់នូវប្រព័ន្ធប្រតិបត្តិការផ្សេងៗ(`Windows`, `Linux`, និង `Debian`) នៅក្នុងពេលដំណាលគ្នានៅលើម៉ាស៊ីនរបស់យើង។ ប្រព័ន្ធប្រតិបត្តិការដែល `virtual machine` កំពុងដំណើរការគឺគេហៅថា `virtualized operating systems` ។ **Virtualized Operating Systems** ទាំងអស់នេះគឺអាចប្រតិបត្តិនូវកម្មវិធីនិងបំពេញភារកិច្ចដូចប្រព័ន្ធប្រតិបត្តិការពិតៗអញ្ចឹង។
 
+![Virtual Machine](/img/docs/virtual-machine.jpg)
+
 ### Containers Vs. Virtual Machine
 
 <TableComponent>
@@ -66,5 +68,25 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 ### គុណសម្បត្តិរបស់ Docker
 
-- គុណសម្បត្តិរបស់ Docker គឺមានដូចខាងក្រោម៖
-    - 
+- គុណសម្បត្តិរបស់ **Docker** គឺមានដូចខាងក្រោម៖
+  - វាប្រើ `memory` អស់តិច។
+  - វាផ្តល់នូវ `lightweight virtualization` ។
+  - វាមិនទាមទារឲ្យមានប្រព័ន្ធប្រតិបត្តិការពេញលេញ ដើម្បីដំណើរការកម្មវិធីនោះទេ។
+  - វាអនុញ្ញាតឲ្យអ្នកប្រើនូវ `remote repository` ដើម្បីអាចចែករំលែក `container` ជាមួយអ្នកដទៃ។
+
+### គុណវិបត្តិនៃ Docker
+
+- គុណវិបត្តិរបស់ **Docker** គឺមានដូចខាងក្រោម៖
+  - វាបង្កើននូវភាពស្មុគស្មាញដោយសារតែមាននូវស្រទាប់បន្ថែម។
+  - នៅក្នុង `Docker`, វាពិបាកនៅក្នុងការគ្រប់គ្រងចំនួនបរិមាណដ៏ធំនៃ `container` ។
+  - មុខងារខ្លះដូចជា `container self-registration`, `containers self-inspects`, ចម្លងឯកសារពី `host` ទៅ `container`, និងអ្វីផ្សេងទៀតត្រូវបានបាត់នៅក្នុង `Docker` ។
+  - `Docker` មិនមានដំណោះស្រាយដ៏ល្អសម្រាប់កម្មវិធីដែលទាមទារនូវ `rich graphical interface` ។
+
+### Docker Engine
+
+- វាជា `client server application` ដែលមានធាតុផ្សំសំខាន់ៗដូចខាងក្រោម៖
+  - `Server` ដែលជាប្រភេទកម្មវិធីដែលដំណើរការយូរហៅថា `daemon process` ។
+  - `REST API` ត្រូវបានប្រើដើម្បីបញ្ជាក់ពីចំណុចប្រទាក់នៃកម្មវិធីដែលអាចប្រើដើម្បីនិយាយទៅកាន់ `daemon` ហើយណែនាំឲ្យធ្វើអ្វីមួយ។
+  - `Client` មានជា `command line interface` សម្រាប់ដាក់ពាក្យបញ្ជាទៅកាន់ `Server` ។
+
+![Docker Engine](/img/docs/docker-engine.jpg)
