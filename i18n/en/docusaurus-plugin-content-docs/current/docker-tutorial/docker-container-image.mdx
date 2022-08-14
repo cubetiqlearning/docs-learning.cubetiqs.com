@@ -1,0 +1,27 @@
+---
+sidebar_position: 4
+---
+
+# Docker - Container and Image
+
+### Docker Container
+
+**Docker container** is a running `instance` of an `image`. You can use `Command Line Interface (CLI)` commands to `run`, `start`, `stop`, `move`, or `delete a container`. You can also provide configuration for the `network` and `environment variables`. **Docker container** is an isolated and secure application platform, but it can share and access to resources running in a different `host` or `container`.
+
+### Docker Image
+
+An **image** is a `read-only template with instructions` for creating a **Docker container**. A docker image is described in text file called a `Dockerfile`, which has a simple, well-defined `syntax`.
+
+### Example
+
+You can understand `container` and `image` with the help of the following command:
+
+```shell
+$ docker run hello-world
+```
+
+The above command `docker run hello-world` has `three` parts:
+
+1. **docker**: It is `docker engine` and used to run `docker program`. It tells to the operating system that you are running `docker program`.
+2. **run**: This subcommand is used to create and run a `docker container`.
+3. **hello-world**: It is a `name of an image`. You need to specify the name of an image which is to load into the `container`.
