@@ -1,0 +1,65 @@
+---
+sidebar_position: 3
+---
+
+# Docker - Architecture
+
+មុននឹងអ្នកអាចរៀនពី **Docker Architecture** បានគឺអ្នកគួរតែដឹងអំពី **Docker Daemon** ជាមុនសិន។
+
+### តើ Docker daemon ជាអ្វី?
+
+- **Docker Daemon** ដំណើរការនៅលើ `host operating system` ។ វាទទួលខុសត្រូវចំពោះដំណើរការ `containers` ដើម្បីគ្រប់គ្រង `docker services` ។ វាផ្តល់ជូននូវ **Docker object** ដូចជា `images`, `containers`, `networking`, និង `storage` ។
+
+### Docker architecture
+
+- **Docker** យកតម្រាបតាម **Client-Server Architecture** ដែលរួមបញ្ចូលជាមួយនឹង 3 សមាសធាតុសំខាន់ៗដែលមានដូចជា `Docker Client`, `Docker Host`, និង `Docker Registry` ។
+
+![Docker Architecture](/img/docs/docker-architecture.jpg)
+
+#### 1. Docker Client
+
+- **Docker Client** ប្រើពាក្យបញ្ជានិង `REST APIS` ដើម្បីទាក់ទងជាមួយនឹង **Docker Daemon(Server)** ។ ពេលដែល `clients` ដំណើរការនូវពាក្យបញ្ជាណាមួយនៅលើ `docker client terminal` នោះវានឹងផ្ញើនូវពាក្យបញ្ជាមួយនោះទៅកាន់ **Docker daemon** ។ **Docker daemon** នឹងទទួលបាននូវពាក្យបញ្ជានោះពី `client` នៅក្នុងទម្រង់នៃពាក្យបញ្ជានិង `REST API's request` ។
+
+#### 2. Docker Host
+
+- **Docker Host** ប្រើសម្រាប់ផ្តល់នូវបរិយាកាសដើម្បីអាចប្រតិបត្តិនិងដំណើរការកម្មវិធី។ វាមាននូវ `docker daemon`, `images`, `containers`, `networks`, និង `storage` ។
+
+#### 3. Docker Registry
+
+- **Docker Registry** ប្រើសម្រាប់គ្រប់គ្រងនិងរក្សាទុកនៅ **Docker images** ។
+
+- វាមានពីរប្រភេទនៃ **Docker Registry** ដែលមានដូចខាងក្រោម៖
+  - **Public Registry** - ដែលត្រូវបានគេស្គាល់ថាជា **Docker hub** ។
+  - **Private Registry** - វាប្រើសម្រាប់ចែករំលែកនូវ `images` ជាលក្ខណះសហគ្រាស។
+
+### Docker Objects
+
+- **Docker Objects** មានដូចខាងក្រោម៖
+
+#### Docker Images
+
+- **Docker images** ជា `read-only binary templates` ដែលប្រើសម្រាប់បង្កើតនូវ **Docker containers** ។
+
+#### Docker Containers
+
+- **Containers** ជាគ្រោងឆ្អឹងឯកតាមួយនៃ **Docker** ដែលប្រើសម្រាប់ផ្ទុកនូវកញ្ចប់ទាំងមូលដែលត្រូវការដើម្បីអាចដំណើរការកម្មវិធីបាន។ ហើយអត្ថប្រយោជន៍នៃ `containers` គឺវាទាមទារនូវធនធានតិចណាស់។
+
+- ម្យ៉ាង​ទៀត យើង​អាច​និយាយ​បាន​ថា `image` ​ជា​ `template` ហើយ `container` ​គឺ​ជា​ការ​ចម្លង​នៃ `template` ​នោះ។
+
+![Docker Image Run Container](/img/docs/docker-image-run-container.jpg)
+
+#### Docker Networking
+
+- ប្រើប្រាស់ **Docker Networking** គឺដោយសារឲ្យកញ្ចប់នីមួយៗដែលដាច់ដោយឡែកអាចទាក់ទងគ្នាបាន។ **Docker** មាន `network drivers` ដូចខាងក្រោម៖
+  - **Bridge** - វាជាលំនាំដើមនៃ `network driver` សម្រាប់ `container` ។ វាត្រូវបានប្រើប្រាស់នៅពេលដែល `docker` ជាច្រើនមានទំនាក់ទំនងជាមួយ `docker host` ដូចគ្នា។
+  - **Host** - ​វាប្រើនៅពេលដែលយើងមិនត្រូវការ `network` ដែលដាច់ដោយឡែករវាង `container` និង `host` ។
+  - **None** - វាបិទនូវ `networking` ទាំងអស់។
+  - **Overlay** - វាផ្តល់ជូននូវ `swarm services` ដែលអាចមានទំនាក់ទំនងគ្នាទៅវិញទៅមក។ វាអនុញ្ញាតឲ្យ `containers` អាចដំណើរការនៅលើ `docker host` ផ្សេងៗគ្នា។
+  - **Macvlan** - វាប្រើនៅពេលដែលយើងចង់កំណត់ `MAC addresses` ទៅឲ្យ `containers` ។
+
+#### Docker Storage
+
+- **Docker Storage** ប្រើសម្រាប់រក្សាទុកទិន្នន័យនៅលើ `container` ។ **Docker** ផ្តល់ជូននូវជម្រើសនៃ `storage` ដូចខាងក្រោម៖
+  - **Data Volume** - វាផ្តល់នូវសមត្ថភាពមួយដែលអាចបង្កើតនូវ `persistence storage` ។ វាក៏អនុញ្ញាតឲ្យយើងអាចដាក់ឈ្មោះឲ្យ `volumes`, បង្ហាញនូវ `volumes` ទាំងអស់, និង `containers` ដែលបានភ្ជាប់ជាមួយនឹង `volumes` ។
+  - **Directory Mounts** - វាគឺជាជម្រើសដ៏ល្អមួយសម្រាប់ `docker storage` ។ វា `mounts` ទិន្នន័យពី `host's directory` ទៅក្នុង `container` ។
+  - **Storage Plugins** - វាផ្តល់នូវសមត្ថភាពមួយដែលអាចតភ្ជាប់ទៅកាន់ `external storage platforms` ។
