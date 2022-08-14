@@ -1,0 +1,27 @@
+---
+sidebar_position: 4
+---
+
+# Docker - Container and Image
+
+### Docker Container
+
+**Docker container** ជាដំណើរការ `instance` នៃ `image` ។ អ្នកអាចប្រើ `command line interface(CLI)` ដើម្បីបញ្ជាឲ្យដំណើរការ, ចាប់ផ្តើម​, បញ្ឈប់, ផ្លាស់ទី, ឬលុប `container` ។ អ្នកក៏អាចកំណត់នូវរចនាសម្ព័ន្ធសម្រាប់ `network` និង `environment variables` ផងដែរ។ **Docker container** មានលក្ខណះដាច់ដោយឡែកនិងជាកម្មវិធីដែលមានសុវត្ថិភាព ប៉ុន្តែវាអាចចែករំលែកនិងអាចចូលទៅកាន់ប្រភពដែលកំពុងត្រូវបានដំណើរការនៅក្នង `host` ឬ `container` ផ្សេងគ្នា។
+
+### Docker Image
+
+**Image** ជា `read-only template with instructions` ដែលប្រើសម្រាប់បង្កើតនូវ **Docker container** ។ វាត្រូវបានពិពណ៌នានៅក្នុងឯកសារអត្ថបទមួយហៅថា `Dockerfile` ដែលមានលក្ខណះសាមញ្ញហើយនិងបានកំណត់នូវ `syntax` បានយ៉ាងល្អ។
+
+### ឧទាហរណ៍
+
+អ្នកអាចយល់ពី `container` និង `image` ដោយមានជំនួយពីពាក្យបញ្ជាខាងក្រោម៖
+
+```shell
+$ docker run hello-world
+```
+
+ពាក្យបញ្ជាខាងលើ `docker` ដំណើរការ `hello-world` មានបីផ្នែក៖
+
+1. **docker**: វាជា `docker engine` ហើយវាប្រើសម្រាប់ដំណើរការនូវកម្មវិធី `docker` ។​ ហើយពេលប្រើវា វានឹងប្រាប់ទៅប្រព័ន្ធប្រតិបត្តិការថាអ្នកកំពុងតែដំណើរការកម្មវិធី `docker` ។
+2. **run**: ពាក្យបញ្ជារងមួយនេះប្រើសម្រាប់បង្កើតនិងដំណើរការ `docker container` ។
+3. **hello-world**: វាជាឈ្មោះរបស់ `image` ។ អ្នកគួរតែបញ្ជាក់ពីឈ្មោះរបស់ `image` ដើម្បីអាចផ្ទុកក្នុង `container` ។
