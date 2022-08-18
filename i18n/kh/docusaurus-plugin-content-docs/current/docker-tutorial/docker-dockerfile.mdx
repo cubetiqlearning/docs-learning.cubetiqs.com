@@ -1,0 +1,41 @@
+---
+sidebar_position: 5
+---
+
+# Docker - Dockerfile
+
+### អ្វីទៅជា Dockerfile?
+
+- **Dockerfile** ជាឯកសារអត្ថបទដែលមាននូវពាក្យបញ្ជាដែលប្រើសម្រាប់ប្រមូលផ្តុំឬបង្កើត `image` ។ យើងអាចប្រើពាក្យបញ្ជាទាំងនោះដើម្បីបញ្ជាទៅ `command line` ។ **Docker** ធ្វើការបង្កើត `image` ដោយស្វ័យប្រវត្តិដោយបានអាន `instruction` ពី `Dockerfile` ។
+
+- **Docker** បានបង្កើតនូវពាក្យបញ្ជាដែលប្រើសម្រាប់បង្កើតនូវ `image` ចេញពី `Dockerfile` ។ អ្នកអាចប្រើស្លាក `-f` ជាមួយពាក្យបញ្ជា `docker build` ដើម្បីអាចដៅទៅរកចំណុចដែល `Dockerfile` ស្ថិតនៅទីតាំងណានៅក្នុងម៉ាស៊ីនរបស់អ្នក។
+
+```shell
+$ docker build -f /path/to/a/Dockerfile .
+```
+
+### Dockerfile Instructions
+
+- សម្រាប់ `instructions` គឺវាមិនប្រកាន់អក្សរតូចធំទេ ប៉ុន្តែអ្នកគួរតែអនុវត្តទៅតាមអនុសញ្ញាដែលមានការណែនាំឲ្យប្រើអក្សរធំ។
+
+- **Docker** ដំណើរការ `instructions` នៃ `Dockerfile` ពីលើចុះក្រោម។ `Instruction` ទីមួយគឺ `FROM` ដែលបញ្ជាក់ពីមូលដ្ធានរបស់ `image` ។
+
+- **Statement** ដែលចាប់ផ្តើមដោយ `#` គឺចាត់ទុកជា `comment` ហើយក្រៅពីនេះអ្នកអាចប្រើ `instructions` ដែលមានដូចជា `RUN`, `CMD`, `FROM`, `EXPOSE`, `ENV`, និងមានជាច្រើនទៀតនៅក្នុង `Dockerfile` បាន។
+
+#### FROM
+
+- **Instruction** មួយនេះគឺប្រើសម្រាប់កំណត់នូវមូលដ្ធានរបស់ `image` ហើយនៅក្នុង `Dockerfile` គឺទាមទារឲ្យមាននូវ `instruction` មួយនេះនៅលើគេ។
+
+```Dockerfile
+FROM ubuntu  
+```
+
+#### LABEL
+
+#### RUN
+
+#### CMD
+
+#### COPY
+
+#### WORKDIR
