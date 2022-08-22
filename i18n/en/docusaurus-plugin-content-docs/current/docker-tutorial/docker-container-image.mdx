@@ -25,3 +25,163 @@ The above command `docker run hello-world` has `three` parts:
 1. **docker**: It is `docker engine` and used to run `docker program`. It tells to the operating system that you are running `docker program`.
 2. **run**: This subcommand is used to create and run a `docker container`.
 3. **hello-world**: It is a `name of an image`. You need to specify the name of an image which is to load into the `container`.
+
+### Special commands to use daily
+
+- **Pulling Image**:
+
+  ```shell
+  $ docker pull nginx
+  ```
+
+  - Used to pull an `image` from the `docker hub` and `nginx` is the name of the `image`.
+
+- **Showing Image**:
+
+  ```shell
+  $ docker images ឬ​ $ docker image ls
+  ```
+
+  - Used to show all `images` conatained in the local machine.
+
+- **Running Container**:
+
+  ```shell
+  $ docker run nginx:latest
+  ```
+
+  - Used to run `container`, where `nginx` is the `name of the image`, and the `latest` is the `version` of the image and must be associated with a `colon(:)` in front of the version.
+
+  ```shell
+  $ docker run -d nginx:latest
+  ```
+
+  - Used to run the `container` same as `docker run nginx:latest`, but this command is executed in `detached mode`, that is, run the `container` and you can use the `console` where you are `running the container normally`, but if you use the above command, you cannot use the `console`.
+
+- **Showing Container**:
+
+  ```shell
+  $ docker container ls ឬ $ docker ps
+  ```
+
+  - Used to show all `conatiners` that are running.
+
+  ```shell
+  $ docker ps -a
+  ```
+
+  - Used to show all `containers` whether a `conatiner` is `running` or `stopped`.
+
+  ```shell
+  $ docker ps -q
+  ```
+
+  - Used to show only the `ID` of the `container` that is running.
+
+  ```shell
+  $ docker ps -aq ឬ $ docker ps -a -q
+  ```
+
+  - Used to show only the `ID` of the `container`, for both `running` and `stopped`.
+
+  ```shell
+  $ docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+  ```
+
+  - Used to show all `containers` that are running in `easy-to-view` format.
+
+  ```shell
+  export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+  ```
+
+  - Used for `export path variables` in the machine for easy retrieval next time without having to write it more.
+
+  ```shell
+  $ docker ps --format=$FORMAT
+  ```
+
+  - Used to show a `container` that is `formatted` by calling the `path variable`.
+
+- **Stop Container**:
+
+  ```shell
+  $ docker stop 19411e21c4fa
+  ```
+
+  - Used to stop a `container` and `19411e21c4fa`is the `container ID`.
+
+  ```shell
+  $ docker stop boring_merkle
+  ```
+
+  - ប្រើសម្រាប់បញ្ឈប់ `container` ដូចទៅនឹងពាក្យបញ្ជាខាងលើដែរតែពាក្យបញ្ជា `(docker stop 19411e21c4fa)` ខាងលើគឺប្រើ `ID` របស់ `container` តែ ពាក្យបញ្ជានេះវិញគឺប្រើឈ្មោះរបស់ `container` វិញ តែយ៉ាងណាមិញអ្នកចង់ប្រើជម្រើសមួយណាក៏បាន។
+
+- **Exposing Port**:
+
+  ```shell
+  $ docker run -d -p 9000:80 nginx:latest
+  ```
+
+  - ប្រើសម្រាប់ដំណើរការ `container` ជាលក្ខណះ `detached mode` ហើយមានការរួមបញ្ចូលជាមួយនឹងការបញ្ជាក់យ៉ាងច្បាស់ជាមួយនឹង `expose port` ដែលទុកប្រើសម្រាប់ដំណើរការកម្មវិធី `nginx` ហើយដើម្បីបញ្ជាក់ `expose port` បាន អ្នកត្រូវប្រើស្លាក `-p` ហើយបន្ទាប់គឺ `port` ដែលអ្នកចង់ដាក់ ហើយបន្ទាប់គឺសញ្ញា `colon(:)` ហើយបន្ទាប់គឺ `port` របស់ `container` នោះផ្ទាល់។
+
+  ```shell
+  $ docker run -d -p 9000:80 -p 9010:80 nginx:latest
+  ```
+
+  - ប្រើសម្រាប់ដំណើរការ `container` ដូចពាក្យបញ្ជាខាងលើដែរ តែអ្នកអាចប្រើ `multiple port` បាន ពោលគឺអ្នកប្រើ `port 9000` ក៏ដំណើរការជោគជ័យ ឬក៏ប្រើ `port 9010` ក៏ដំណើរការជោគជ័យ។
+
+- **Start Container**:
+
+  ```shell
+  $ docker start 19411e21c4fa ឬ $ docker start boring_merkle
+  ```
+
+  - ប្រើសម្រាប់ចាប់ផ្តើមដំណើរការ `container` ដែលមានរួចជាស្រេច ហើយអ្នកចង់ប្រើជម្រើសចាប់ផ្តើមដោយ `ID` របស់ `container` ក៏បាន​ ឬក៏ប្រើជម្រើស​ចាប់ផ្តើមដោយឈ្មោះរបស់ `container` ក៏បាន។
+
+- **Removing Container**:
+
+  ```shell
+  $ docker rm 19411e21c4fa ឬ $ docker rm boring_merkle
+  ```
+
+  - ប្រើសម្រាប់លុប `container` ចោលហើយការលុបមួយនេះ អ្នកអាចលុបដោយប្រើ `ID` របស់ `container` ក៏បានឬក៏ឈ្មោះរបស់ `container` ក៏​បាន ហើយមួយវិញទៀត អ្នកអាចលុប `container` ចោលបាន លុះត្រាតែ `container` នោះត្រូវបានបញ្ឈប់ជាមុនសិន ។
+
+  ```shell
+  $ docker rm -f 19411e21c4fa ឬ $ docker rm -f boring_merkle
+  ```
+
+  - ប្រើសម្រាប់លុប `container` ចោលដូចនឹងពាក្យបញ្ជាខាងលើដែរ តែការលុបនេះគឺលុបក្នុងលក្ខណះ `force mode` គឺមានន័យថាលុប `container` ចោលដោយមិនចាំបាច់ត្រូវបញ្ឈប់ `container` នោះទេ ហើយការលុបមួយនេះ អ្នកអាចលុបដោយប្រើ `ID` របស់ `container` ក៏បានឬក៏ឈ្មោះរបស់ `container` ក៏​បាន។
+
+  ```shell
+  $ docker rm $(docker ps -aq)
+  ```
+
+  - ប្រើសម្រាប់លុប `container` ចោលទាំងអស់ដោយប្រើ `ID` របស់ `container` សម្រាប់រាល់ `containers` ដែលត្រូវបានបញ្ឈប់ ។
+
+  ```shell
+  $ docker rm -f $(docker ps -aq)
+  ```
+
+  - ប្រើសម្រាប់លុប `container` ចោលទាំងអស់ដែរ តែអ្នកអាចលុបទាំង containers ដែលកំពុងតែត្រូវបានដំណើរការនិងមិនដំណើរការ។
+
+- **Naming Container**:
+
+  ```shell
+  $ docker run -d --name nginx-ms -p 9000:80 nginx:latest
+  ```
+
+  - ប្រើសម្រាប់កំណត់ឈ្មោះទៅតាមឈ្មោះអ្វីដែលអ្នកចង់ដាក់ `--name` គឺជាស្លាកតំណាងឲ្យការកំណត់ឈ្មោះ ចំណែកឯ `nginx-ms` គឺជាឈ្មោះរបស់ `container` ដែលអ្នកចង់ដាក់។
+
+- **Volumes**:
+
+  ```shell
+  $ docker run --name cambodia-website -d -p 9000:80 -v /home/mengsreang/Desktop/cambodia-website:/usr/share/nginx/html nginx:latest
+  ```
+
+  - ប្រើសម្រាប់​ដំណើរការ `container` ដោយមានកំណត់ជាលក្ខណះ `volumes` ដែលធ្វើការភ្ជាប់ `project` ដែលមាននៅក្នុងកុំព្យូទ័ររបស់អ្នកទៅកាន់ `server` របស់ `nginx` ក្នុង `docker` ។​ សម្រាយបន្តិច: ស្លាក `-v` គឺតំណាងឲ្យ `volumes` រីឯ `/home/mengsreang/Desktop/cambodia-website` គឺជាទីតាំង `project` របស់អ្នកនៅក្នុងកំព្យូទ័រ ហើយមួយទៀតគឺ `/usr/share/nginx/html` គឺជាទីតាំង `project` របស់ `nginx server` ហើយកុំភ្លេចដាក់សញ្ញា `colon(:)` នៅពីមុខផង។
+
+  ```shell
+  $ docker exec -it cambodia-website bash
+  ```
+
+  - ប្រើសម្រាប់បង្កើត `bash` ដើម្បីចូលទៅមើល `project` នៅក្នុង `nginx server` ។​ សម្រាយបន្តិច `exec` គឺតំណាងឲ្យការ `execute` រីឯស្លាក `-it` គឺមានន័យថា `execute bash` ជាលក្ខណះ `interative mode` ។
