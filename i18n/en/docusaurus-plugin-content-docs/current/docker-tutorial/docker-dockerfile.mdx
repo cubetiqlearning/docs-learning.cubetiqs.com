@@ -1,0 +1,71 @@
+---
+sidebar_position: 5
+---
+
+# Docker - Dockerfile
+
+### What is Dockerfile?
+
+- A **Dockerfile** is a text document that contains commands that are used to assemble an `image`. We can use any command that call on the `command line`. **Docker** builds `images` automatically by reading the `instructions` from the `Dockerfile`.
+
+- The **docker** build command is used to build an `image` from the `Dockerfile`. You can use the `-f flag` with` docker build` to point to a `Dockerfile` anywhere in your file system.
+
+```shell
+$ docker build -f /path/to/a/Dockerfile .
+```
+
+### Dockerfile Instructions
+
+- The `instructions` are not case-sensitive but you must follow conventions which recommend to use uppercase.
+
+- **Docker** runs `instructions` of `Dockerfile` in top to bottom order. The first `instruction` must be `FROM` in order to specify the `Base Image`.
+
+- A **statement** begin with `#` treated as a `comment`. You can use `RUN`, `CMD`, `FROM`, `EXPOSE`, `ENV` etc instructions in your `Dockerfile`.
+
+#### FROM
+
+- This **instruction** is used to set the `Base Image` for the subsequent instructions. A valid `Dockerfile` must have FROM as its first `instruction`.
+
+```Dockerfile
+FROM node:latest
+```
+
+#### LABEL
+
+- We can add labels to an `image` to organize images of our project. We need to use `LABEL` instruction to set label for the `image`.
+
+```Dockerfile
+LABEL maintainer = "CUBETIQ"
+```
+
+#### WORKDIR
+
+- The `WORKDIR` is used to set the working directory for any `RUN`, `CMD` and `COPY` instruction that follows it in the `Dockerfile`. If work directory does not exist, it will be created by default. We can use `WORKDIR` multiple times in a `Dockerfile`.
+
+```Dockerfile
+WORKDIR /app
+```
+
+#### COPY
+
+- This **instruction** is used to copy new files or directories from `source` to the filesystem of the container at the `destination`.
+
+```Dockerfile
+COPY package*.json ./
+```
+
+#### RUN
+
+- This **instruction** is used to execute any command of the `current image`.
+
+```Dockerfile
+RUN npm install
+```
+
+#### CMD
+
+- This is used to execute `application` by the `image`. There can be only one `CMD` in a `Dockerfile`. If we use more than one `CMD`, only last one will execute.
+
+```Dockerfile
+CMD ["node", "app.js"]
+```
