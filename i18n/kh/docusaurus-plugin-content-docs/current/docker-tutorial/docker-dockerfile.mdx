@@ -27,15 +27,45 @@ $ docker build -f /path/to/a/Dockerfile .
 - **Instruction** មួយនេះគឺប្រើសម្រាប់កំណត់នូវមូលដ្ធានរបស់ `image` ហើយនៅក្នុង `Dockerfile` គឺទាមទារឲ្យមាននូវ `instruction` មួយនេះនៅលើគេ។
 
 ```Dockerfile
-FROM ubuntu  
+FROM node:latest
 ```
 
 #### LABEL
 
-#### RUN
+- **Instruction** មួយនេះគឺប្រើសម្រាប់កំណត់នូវស្លាកទៅឲ្យ `image` ហើយនៅក្នុង `Dockerfile` គេប្រើ `instruction` មួយនេះដើម្បីកំណត់ស្លាកទៅឲ្យ `image` ។
 
-#### CMD
+```Dockerfile
+LABEL maintainer = "CUBETIQ"
+```
+
+#### WORKDIR
+
+- **Instruction** មួយនេះគឺប្រើសម្រាប់កំណត់ថតការងារសម្រាប់ណែនាំឲ្យ `instruction` `RUN`, `CMD`, និង `COPY` ដែលធ្វើតាមនៅក្នុង `Dockerfile` ។ ប្រសិនបើថតការងារមិនត្រូវបានបង្កើតទេ នោះវានឹងបង្កើតដោយខ្លួនឯង។ ម្យ៉ាងវិញទៀតយើងអាចប្រើប្រាស់ `instruction` មួយនេះបានច្រើនដងក្នុង `Dockerfile` ។
+
+```Dockerfile
+WORKDIR /app
+```
 
 #### COPY
 
-#### WORKDIR
+- **Instruction** មួយនេះគឺប្រើសម្រាប់ចំលងឯកសារថ្មីឬក៏ថតឯកសារពីប្រភពមួយណាហើយទៅគោលដៅមួយណា។
+
+```Dockerfile
+COPY package*.json ./
+```
+
+#### RUN
+
+- **Instruction** មួយនេះគឺប្រើសម្រាប់ដំណើរការនូវពាក្យបញ្ជាទៅកាន់ `image` ។
+
+```Dockerfile
+RUN npm install
+```
+
+#### CMD
+
+- **Instruction** មួយនេះគឺប្រើសម្រាប់ដំណើរការកម្មវិធីដែលត្រូវបាន `build` រួចរាល់របស់ `image` ។ ភាគច្រើនពាក្យបញ្ជា `CMD` គឺមិនអាចមានលើសពីមួយបានទេនៅក្នុង `Dockerfile` តែបើសិនជាមានច្រើនគឺវាប្រតិបត្តិតែពាក្យបញ្ជាណាមួយដែលស្ថិតនៅក្រោយគេតែប៉ុណ្ណោះ។
+
+```Dockerfile
+CMD ["node", "app.js"]
+```
