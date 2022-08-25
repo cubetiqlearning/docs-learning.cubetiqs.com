@@ -25,3 +25,163 @@ The above command `docker run hello-world` has `three` parts:
 1. **docker**: It is `docker engine` and used to run `docker program`. It tells to the operating system that you are running `docker program`.
 2. **run**: This subcommand is used to create and run a `docker container`.
 3. **hello-world**: It is a `name of an image`. You need to specify the name of an image which is to load into the `container`.
+
+### Special commands to use daily
+
+- **Pulling Image**:
+
+  ```shell
+  $ docker pull nginx
+  ```
+
+  - Used to pull an `image` from the `docker hub` and `nginx` is the name of the `image`.
+
+- **Showing Image**:
+
+  ```shell
+  $ docker images ឬ​ $ docker image ls
+  ```
+
+  - Used to show all `images` contained in the local machine.
+
+- **Running Container**:
+
+  ```shell
+  $ docker run nginx:latest
+  ```
+
+  - Used to run `container`, where `nginx` is the `name of the image`, and the `latest` is the `version` of the image and must be associated with a `colon(:)` in front of the version.
+
+  ```shell
+  $ docker run -d nginx:latest
+  ```
+
+  - Used to run the `container` same as `docker run nginx:latest`, but this command is executed in `detached mode`, that is, run the `container` and you can use the `console` where you are `running the container normally`, but if you use the above command, you cannot use the `console`.
+
+- **Showing Container**:
+
+  ```shell
+  $ docker container ls ឬ $ docker ps
+  ```
+
+  - Used to show all `containers` that are running.
+
+  ```shell
+  $ docker ps -a
+  ```
+
+  - Used to show all `containers` whether a `container` is `running` or `stopped`.
+
+  ```shell
+  $ docker ps -q
+  ```
+
+  - Used to show only the `ID` of the `container` that is running.
+
+  ```shell
+  $ docker ps -aq ឬ $ docker ps -a -q
+  ```
+
+  - Used to show only the `ID` of the `container`, for both `running` and `stopped`.
+
+  ```shell
+  $ docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+  ```
+
+  - Used to show all `containers` that are running in `easy-to-view` format.
+
+  ```shell
+  export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+  ```
+
+  - Used for `export path variables` in the machine for easy retrieval next time without having to write it more.
+
+  ```shell
+  $ docker ps --format=$FORMAT
+  ```
+
+  - Used to show a `container` that is `formatted` by calling the `path variable`.
+
+- **Stop Container**:
+
+  ```shell
+  $ docker stop 19411e21c4fa
+  ```
+
+  - Used to stop a `container` and `19411e21c4fa`is the `container ID`.
+
+  ```shell
+  $ docker stop boring_merkle
+  ```
+
+  - Used to stop the `container` same as in the above command, but `docker stop 19411e21c4fa` above use the `container ID`, but this command uses the `name of the container`, however you can use any options.
+
+- **Exposing Port**:
+
+  ```shell
+  $ docker run -d -p 9000:80 nginx:latest
+  ```
+
+  - Used to run the `container` in `detached mode`, and it includes with explicit specification with the `expose port`, which is used to run the `nginx` program, and to specify the `expose port`, and you need to use the `-p` flag, and then the port you want to place, and then the `colon(:)` and then the `port` of the `container itself`.
+
+  ```shell
+  $ docker run -d -p 9000:80 -p 9010:80 nginx:latest
+  ```
+
+  - Used to run the `container` same as in the above command, but for this command you can use `multiple ports`, ie `port 9000` is successful or `port 9010` is also successful.
+
+- **Start Container**:
+
+  ```shell
+  $ docker start 19411e21c4fa ឬ $ docker start boring_merkle
+  ```
+
+  - Used to start an `existing container` and you want to use the option start with the `container ID` or use the start option with the `container name`.
+
+- **Removing Container**:
+
+  ```shell
+  $ docker rm 19411e21c4fa ឬ $ docker rm boring_merkle
+  ```
+
+  - Used to remove the `container`, and this can be removed using the `container ID` or the `container name`, and you can remove the container only if the container is `stopped`.
+
+  ```shell
+  $ docker rm -f 19411e21c4fa ឬ $ docker rm -f boring_merkle
+  ```
+
+  - Used to remove the `container` same as in the above command, but this is in `force mode`, which means removing the container without having to stop the container, and you can remove it using the `container ID` or `container name`.
+
+  ```shell
+  $ docker rm $(docker ps -aq)
+  ```
+
+  - Used to remove `all containers`, using the `container ID` for `all stopped containers`.
+
+  ```shell
+  $ docker rm -f $(docker ps -aq)
+  ```
+
+  - Used to remove all `containers`, but you can delete both containers that `running and not running`.
+
+- **Naming Container**:
+
+  ```shell
+  $ docker run -d --name nginx-ms -p 9000:80 nginx:latest
+  ```
+
+  - Used to assign a name to what you want to name using `--name` flag, while `nginx-ms` is the `container name`.
+
+- **Volumes**:
+
+  ```shell
+  $ docker run --name cambodia-website -d -p 9000:80 -v /home/mengsreang/Desktop/cambodia-website:/usr/share/nginx/html nginx:latest
+  ```
+
+  - Used to run a container with specific volumnes that connect the project contained in your computer to the nginx server in the docker. A little simplification: The `-v` flag represents volumnes, while `/home/mengsreang/Desktop/cambodia-website` is your project location on the computer, and `/usr/share/nginx/html` is the project location of the nginx server. And don't forget to put a `colon(:)` in front of it.
+
+  ```shell
+  $ docker exec -it cambodia-website bash
+  ```
+
+  - Used to create a bash to access a project on `nginx server`. That `exec` command represents execute, while the `-it` flag means execute bash in `interactive mode`.
