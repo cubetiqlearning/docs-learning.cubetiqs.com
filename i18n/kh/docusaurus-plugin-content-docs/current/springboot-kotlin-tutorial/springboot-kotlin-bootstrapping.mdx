@@ -4,50 +4,50 @@ sidebar_position: 2
 
 # Spring Boot Kotlin - ការ Bootstrapping
 
-ជំពូកនេះនឹងពន្យល់អ្នកពីរបៀបក្នុងការ `bootstrapping` នៅលើកម្មវិធី **Spring Boot** ។
+ជំពូកនេះនឹងពន្យល់អ្នកពីរបៀបក្នុងការ `bootstrapping` នៅលើកម្មវិធី **Spring Boot**។
 
 ### Spring Initializer
 
-- ដើម្បីអាចបង្កើតនូវ **Project Spring Boot** មួយបានគឺមានវិធីច្រើន តែនៅក្នុង **Tutorial** មួយនេះគឺយើងនឹងនាំអ្នកទៅបង្កើត **Project Spring Boot** នៅលើគេហទំព័រ <a href="https://start.spring.io/" target="_blank">Spring Initializer</a> ។
+- ដើម្បីអាចបង្កើតនូវ **Project Spring Boot** មួយបានគឺមានវិធីច្រើន តែនៅក្នុង **Tutorial** មួយនេះគឺយើងនឹងនាំអ្នកទៅបង្កើត **Project Spring Boot** នៅលើគេហទំព័រ <a href="https://start.spring.io/" target="_blank">Spring Initializer</a>។
 
 ![Spring Initializer Dashboard](/img/docs/start-spring-io.jpg)
 
-- នៅក្នុងរូបខាងលើគឺអ្នកនឹងបានឃើញនូវផ្ទាំងមួយ ដែលផ្ទាំងមួយនេះគឺប្រើសម្រាប់បង្កើតនូវ **Project Spring Boot** ។ ឥឡូវយើងនឹងនាំអ្នកទៅស្វែងយល់ពីចំណុចនីមួយៗនៅក្នុងផ្ទាំងនេះ
+- នៅក្នុងរូបខាងលើគឺអ្នកនឹងបានឃើញនូវផ្ទាំងមួយ ដែលផ្ទាំងមួយនេះគឺប្រើសម្រាប់បង្កើតនូវ **Project Spring Boot**។ ឥឡូវយើងនឹងនាំអ្នកទៅស្វែងយល់ពីចំណុចនីមួយៗនៅក្នុងផ្ទាំងនេះ
 
-  - **Project**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ**អ្នកគ្រប់គ្រង់ Project** _(អ្នកគ្រប់គ្រង Project គឺជាអ្នកដែលអាចរៀបចំឲ្យបានត្រឹមត្រូវទាក់ទងនឹង dependencies ដែលអ្នកត្រូវយកមកប្រើនៅក្នុង Project ហើយម៉្យាងវិញទៀតគឺអាចកំណត់នូវ Version របស់ Project បានដូចគ្នានិងមានជាច្រើនទៀត។ល។)_ ហើយសម្រាប់**អ្នកគ្រប់គ្រង Project** នេះគឺមានចំនួនពីរដូចខាងក្រោម:
+  - **Project**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ**អ្នកគ្រប់គ្រង់ Project** _(អ្នកគ្រប់គ្រង Project គឺជាអ្នកដែលអាចរៀបចំឲ្យបានត្រឹមត្រូវទាក់ទងនឹង dependencies ដែលអ្នកត្រូវយកមកប្រើនៅក្នុង Project ហើយម៉្យាងវិញទៀតគឺអាចកំណត់នូវ Version របស់ Project បានដូចគ្នានិងមានជាច្រើនទៀត។ល។)_ ហើយសម្រាប់**អ្នកគ្រប់គ្រង Project** នេះគឺមានចំនួនពីរដូចខាងក្រោម៖
 
-    - **Maven** ជាឧបករណ៍សម្រាប់គ្រប់គ្រង `Project` ដែលមានលក្ខណះជា `open-source software` ហើយត្រូវប្រើជាចម្បងសម្រាប់ **Project Java** ។
-    - **Gradle** ជាឧបករណ៍បង្កើតស្វ័យប្រវិត្តិកម្ម ដែលមានលក្ខណះជា `open-source` ហើយវាបង្កើតឡើងបានដោយផ្អែកលើគោលគំនិតរបស់ **Apache Maven** និង **Apache Ant** ។
+    - **Maven** ជាឧបករណ៍សម្រាប់គ្រប់គ្រង `Project` ដែលមានលក្ខណៈជា `open-source software` ហើយត្រូវប្រើជាចម្បងសម្រាប់ **Project Java**។
+    - **Gradle** ជាឧបករណ៍បង្កើតស្វ័យប្រវិត្តិកម្ម ដែលមានលក្ខណៈជា `open-source` ហើយវាបង្កើតឡើងបានដោយផ្អែកលើគោលគំនិតរបស់ **Apache Maven** និង **Apache Ant**។
 
-    មូលហេតុដែលអ្នកគួរប្រើ **Gradle** ព្រោះវាជៀសវាងការតាមដាននូវកិច្ចការដដែល ហើយវាតាមដានតែកិច្ចការណាដែលត្រូវបានផ្លាស់ប្តូរប៉ុណ្ណោះ ដូច្នេះវាផ្តល់នូវដំណើរការលឿនជាងមុន។
+    មូលហេតុដែលអ្នកគួរប្រើ **Gradle** ព្រោះវាជៀសវាងការតាមដាននូវកិច្ចការដដែលៗ ហើយវាតាមដានតែកិច្ចការណាដែលត្រូវបានផ្លាស់ប្តូរប៉ុណ្ណោះ ដូច្នេះវាផ្តល់នូវដំណើរការលឿនជាងមុន។
 
-  - **Language**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃភាសា ដែលមានដូចខាងក្រោម:
+  - **Language**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃភាសា ដែលមានដូចខាងក្រោម៖
 
-    - **Java** ជាភាសាកម្មវិធីដែលត្រូវបានប្រើប្រាស់យ៉ាងទូលំទូលាយ ដែលដំណើរការលើឧបករណ៍រាប់លានរួមទាំងកុំព្យូទ័រ កុំព្យូទ័រយួរដៃ ឧបករណ៍ចល័ត ឧបករណ៍លេងហ្គេម ឧបករណ៍វេជ្ជសាស្ត្រ និងឧបករណ៍ជាច្រើនទៀត។ ទម្រង់នៃភាសា **Java** គឺពឹងផ្អែកទៅលើភាសា **C** និង **C++** ។
-    - **Kotlin** ជាភាសាកម្មវិធីថ្មីដែលមានលក្ខណះ **Open Source** ហើយដូចទៅនឹងភាសា **Java** និង **JavaScript** ដែរ។ វាជាភាសាមួយដែលសំបូរបែប ដែលប្រមូលផ្តុំទៅដោយមុខងារជាច្រើនដែលស្ថិតនៅកន្លែងតែមួយ។ បច្ចុប្បន្ននេះ **Kotlin** ដំណើរការលើ **JVM** ។
-    - **Groovy** ជា `object oriented` និងមានទម្រង់លក្ខណះដូចភាសា **Java** ។ កូដ​របស់ **Groovy** ត្រូវ `compile` ទៅជា **Java Bytecode** ហើយអាចដំណើរការនៅគ្រប់ `platform` ដែលមាន **JRE** ។
+    - **Java** ជាភាសាកម្មវិធីដែលត្រូវបានប្រើប្រាស់យ៉ាងទូលំទូលាយ ដែលដំណើរការលើឧបករណ៍រាប់លានរួមទាំងកុំព្យូទ័រ កុំព្យូទ័រយួរដៃ ឧបករណ៍ចល័ត ឧបករណ៍លេងហ្គេម ឧបករណ៍វេជ្ជសាស្ត្រ និងឧបករណ៍ជាច្រើនទៀត។ ទម្រង់នៃភាសា **Java** គឺពឹងផ្អែកទៅលើភាសា **C** និង **C++**។
+    - **Kotlin** ជាភាសាកម្មវិធីថ្មីដែលមានលក្ខណៈ **Open Source** ហើយដូចទៅនឹងភាសា **Java** និង **JavaScript** ដែរ។ វាជាភាសាមួយដែលសំបូរបែប ដែលប្រមូលផ្តុំទៅដោយមុខងារជាច្រើនដែលស្ថិតនៅកន្លែងតែមួយ។ បច្ចុប្បន្ននេះ **Kotlin** ដំណើរការលើ **JVM**។
+    - **Groovy** ជា `object oriented` និងមានទម្រង់លក្ខណៈដូចភាសា **Java**។ កូដ​របស់ **Groovy** ត្រូវ `compile` ទៅជា **Java Bytecode** ហើយអាចដំណើរការនៅគ្រប់ `platform` ដែលមាន **JRE**។
 
   - **Spring Boot**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ `version` របស់ **Spring Boot** ដូច្នេះអ្នកគួរជ្រើសរើសយក `version` ចុងក្រោយគេ។
 
-  - **Project Metadata**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការបំពេញនៅព័ត៌មានចំនួនទាក់ទងនឹង **Project** :
+  - **Project Metadata**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការបំពេញនៅព័ត៌មានចំនួនទាក់ទងនឹង **Project**៖
 
-    - **Group** ជាការបញ្ជាក់ឈ្មោះរបស់ `package` ។
-    - **Artifact** ជាការបញ្ជាក់ឈ្មោះនៃ `Application` ។
+    - **Group** ជាការបញ្ជាក់ឈ្មោះរបស់ `package`។
+    - **Artifact** ជាការបញ្ជាក់ឈ្មោះនៃ `Application`។
     - **Name** ដូចទៅនឹង `Artifact` ដែរ។
-    - **Description** ជាការពិពណ៍នាទៅលើ `Project` ។
-    - **Package name** ដូចទៅនឹង `Group` ។
+    - **Description** ជាការពិពណ៍នាទៅលើ `Project`។
+    - **Package name** ដូចទៅនឹង `Group`។
     - **Packaging** ជាការជ្រើសរើសនូវប្រភេទនៃ `packaging` សម្រាប់ `build` យកទៅដំណើរក្នុងការប្រើប្រាស់ ហើយវាមានពីរគឺ:
       - **Jar** ជា **Java Application Archive** ដែលអាចដំណើរការកម្មវិធីនៅកុំព្យូទ័ររបស់ប្រើប្រាស់បានធម្មតា​។
-      - **War** ជា **Web Application Archive** ដែលអាចដំណើរការកម្មវិធីបានតែនៅលើ `server` ។
+      - **War** ជា **Web Application Archive** ដែលអាចដំណើរការកម្មវិធីបានតែនៅលើ `server`។
     - **Java** ជាការជ្រើសរើសនូវប្រភេទនៃ `version` របស់ **Java** ដូច្នេះអ្នកអាចជ្រើសរើសយក `version` ណាដែលអ្នកចង់ប្រើបាន។
 
   - **Dependencies**: នៅក្នុងផ្នែកនេះគឺគេទាមទារឲ្យអ្នកធ្វើការជ្រើសរើសនូវប្រភេទនៃ `dependencies` ដូច្នេះអ្នកអាចរើសនូវ `dependencies` ដូចក្នុងរូបក៏បានឬក៏រើសតែ **Spring Web** មួយសិនក៏បាន។
 
   បន្ទាប់ពីនេះអ្នកនឹងឃើញនូវប៊ូតុងនៅខាងក្រោមចំនួនបីបន្ថែមទៀត:
 
-  - **GENERATE**: ជាប៊ូតុងសម្រាប់បង្កើត **Project Spring Boot** ។
-  - **EXPLOER**: ជាប៊ូតុងសម្រាប់មើល **Structure Project Spring Boot** ។
-  - **SHARE...**: ជាប៊ូតុងសម្រាប់ចែករំលែក **Project Spring Boot** ។
+  - **GENERATE**: ជាប៊ូតុងសម្រាប់បង្កើត **Project Spring Boot**។
+  - **EXPLOER**: ជាប៊ូតុងសម្រាប់មើល **Structure Project Spring Boot**។
+  - **SHARE...**: ជាប៊ូតុងសម្រាប់ចែករំលែក **Project Spring Boot**។
 
 - បន្ទាប់ពីចុចប៊ូតុង **Generate** រួចរាល់ វាផ្តល់ `zip file` មួយដូចរូបខាងក្រោម:
 
@@ -73,7 +73,7 @@ sidebar_position: 2
 
 ![Spring Boot After Delete Unused File](/img/docs/springboot-after-delete-unused-file.jpg)
 
-- រូបភាពខាងក្រោមនេះគឺជាឯកសារ `build.gradle.kts` ដែលជាឯកសារអ្នកអាចបន្ថែមនូវ `dependencies` ចូលបន្ថែមឬក៏កែប្រែ **Version** នៃ **Java, Kotlin, Spring Boot** ។ល។
+- រូបភាពខាងក្រោមនេះគឺជាឯកសារ `build.gradle.kts` ដែលជាឯកសារអ្នកអាចបន្ថែមនូវ `dependencies` ចូលបន្ថែមឬក៏កែប្រែ **Version** នៃ **Java, Kotlin, Spring Boot**។ល។
 
 ![Spring Boot Grandle Build](/img/docs/springboot-grandle-build.jpg)
 
@@ -91,7 +91,7 @@ plugins {
 }
 ```
 
-- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណះ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin** ។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់ដែល `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable` ។
+- **Plugins**: បន្ថែមទៅលើ **Kotlin Gradle plugin**, លំនាំដើមនៃការ `configuration` គឺប្រកាស `kotlin-spring-plugin` ដែលវាអាចជួយឲ្យ `classes` និង `methods` អាចមានលក្ខណៈ `open` គឺអាចឲ្យ `classes` ផ្សេងអាច `inherited` ទៅប្រើបាន*(class នៅក្នុង Kotlin គឺមិនដូចក្នុង Java ទេ បើសិនមិនដាក់ open keyword នៅពីមុខ class នោះវានឹងក្លាយជា final class)*។ មួយវិញទៀតដើម្បីអាចប្រើ `Kotlin non-nullable properties` ជាមួយ **JPA** គឺអ្នកត្រូវបើក `enabled` នូវ **Kotlin JPA plugin**។ វានឹងបង្កើតនូវ `no-arg constructors` សម្រាប់ `class` ទាំងអស់ដែល `annotated` ជាមួយនឹង `@Entity`, `@MappedSuperclass`, ឬក៏ `@Embeddeable`។
 
 ```shell
 group = "com.webapp"
@@ -99,7 +99,7 @@ version = "0.0.1-SNAPSHOT"
 java.soruceCompatibility = JavaVersion.VERSION_11
 ```
 
-- ខាងលើនេះគឺមានជា `group` ដែលជាឈ្មោះ `package`, `version` ជា `version` នៃ `application` ដែលត្រូវបាន `build`, `java.soruceCompatibility` ជាការកំណត់ទៅលើ `version` របស់ **Java** សម្រាប់ `build` ។
+- ខាងលើនេះគឺមានជា `group` ដែលជាឈ្មោះ `package`, `version` ជា `version` នៃ `application` ដែលត្រូវបាន `build`, `java.soruceCompatibility` ជាការកំណត់ទៅលើ `version` របស់ **Java** សម្រាប់ `build`។
 
 ```shell
 repositories {
@@ -107,7 +107,7 @@ repositories {
 }
 ```
 
-- **Repositories**: ជាការកំណត់នូវកន្លែងនៃការទាញយក `dependencies` មកប្រើនៅក្នុង **Project** ដូចពេលអ្នកដាក់ `mavenCentral()` ចឹងវានឹងទៅទាញយកនៅគេហទំព័រ <a href="https://mvnrepository.com/repos/central" target="_blank">Maven Central Repository</a> ។
+- **Repositories**: ជាការកំណត់នូវកន្លែងនៃការទាញយក `dependencies` មកប្រើនៅក្នុង **Project** ដូចពេលអ្នកដាក់ `mavenCentral()` ចឹងវានឹងទៅទាញយកនៅគេហទំព័រ <a href="https://mvnrepository.com/repos/central" target="_blank">Maven Central Repository</a>។
 
 ```shell
 dependencies {
@@ -123,18 +123,18 @@ dependencies {
 
 - **Dependencies**: `Library` ចំនួនបីរបស់ **Kotlin** ដែលត្រូវបានទាមទារសម្រាប់ **Project Spring Boot** ដែលមានដូចខាងក្រោម:
 
-  - **kotlin-stdlib-jdk8**: ជាស្តង់ដារ `Library` របស់ **Kotlin** នៃ **Java 8 Variant** ។
-  - **kotlin-reflect**: ជា **Kotlin** `reflection library` ។
-  - **jackson-module-kotlin**: ដាក់សម្រាប់ឲ្យគាំទ្រនឹង `serialization/deserialization` នៃ `classes` និង `data classes` របស់ **Kotlin** ។
+  - **kotlin-stdlib-jdk8**: ជាស្តង់ដារ `Library` របស់ **Kotlin** នៃ **Java 8 Variant**។
+  - **kotlin-reflect**: ជា **Kotlin** `reflection library`។
+  - **jackson-module-kotlin**: ដាក់សម្រាប់ឲ្យគាំទ្រនឹង `serialization/deserialization` នៃ `classes` និង `data classes` របស់ **Kotlin**។
 
   ហើយនៅមាន `dependencies` មួយចំនួនទៀត ដែលជារបស់ **Spring** និង **Database** ដែលមានដូចខាងក្រោម:
 
-  - **spring-boot-starter-data-jpa**: ជា `Library` របស់ **Spring Data JPA** ។
-  - **spring-boot-starter-web**: ជា `Library` របស់ **Spring Web** ។
-  - **h2**: ជា `Library` របស់ **H2 Database** ។
-  - **spring-boot-starter-test**: ជា `Library` របស់ **Spring Test** ។
+  - **spring-boot-starter-data-jpa**: ជា `Library` របស់ **Spring Data JPA**។
+  - **spring-boot-starter-web**: ជា `Library` របស់ **Spring Web**។
+  - **h2**: ជា `Library` របស់ **H2 Database**។
+  - **spring-boot-starter-test**: ជា `Library` របស់ **Spring Test**។
 
-  មួយវិញទៀត ឃើញថានៅរាល់ការទាញយក `dependencies` មកគឺមានជាការប្រើនូវមុខងារផ្សេងៗគ្នាដូចជា `implementation` ដែលប្រើសម្រាប់ឲ្យដំណើរការនូវ `dependencies` នោះចាប់ផ្តើមតាំងពីពេល `implement` ទៅ(ពេលសរសេរកូដ), `runtimeOnly` គឺដំណើរការតែពេល `run time` រីឯ `testImplementation` គឺដំណើរការនៅពេល `test` ។
+  មួយវិញទៀត ឃើញថានៅរាល់ការទាញយក `dependencies` មកគឺមានជាការប្រើនូវមុខងារផ្សេងៗគ្នាដូចជា `implementation` ដែលប្រើសម្រាប់ឲ្យដំណើរការនូវ `dependencies` នោះចាប់ផ្តើមតាំងពីពេល `implement` ទៅ(ពេលសរសេរកូដ), `runtimeOnly` គឺដំណើរការតែពេល `run time` រីឯ `testImplementation` គឺដំណើរការនៅពេល `test`។
 
 ```shell
 tasks.withType<KotlinCompile> {
@@ -145,7 +145,7 @@ tasks.withType<KotlinCompile> {
 }
 ```
 
-- **Compile options**: លក្ខណះសំខាន់របស់ **Kotlin** គឺ `null-safety` ដែលជាវាជួយដោះស្រាយបញ្ហាបានយ៉ាងច្រើននៅពេល `compile time` វាជៀសវាងនូវការ `exception` ដ៏ល្បីគឺ **NullPointerException** នៅពេល `run time` ។ ដើម្បីបន្ថែមនូវមុខងារ `null-safety` នេះបានគឺអ្នកត្រូវបន្ថែមនូវ `-Xjsr305` _compiler_ ដែលមាន _flag_ ជាមួយនឹង `strict` ។
+- **Compile options**: លក្ខណៈសំខាន់របស់ **Kotlin** គឺ `null-safety` ដែលជាវាជួយដោះស្រាយបញ្ហាបានយ៉ាងច្រើននៅពេល `compile time` វាជៀសវាងនូវការ `exception` ដ៏ល្បីគឺ **NullPointerException** នៅពេល `run time`។ ដើម្បីបន្ថែមនូវមុខងារ `null-safety` នេះបានគឺអ្នកត្រូវបន្ថែមនូវ `-Xjsr305` _compiler_ ដែលមាន _flag_ ជាមួយនឹង `strict`។
 
 ```shell
 tasks.withType<Test> {
@@ -153,7 +153,7 @@ tasks.withType<Test> {
 }
 ```
 
-- **Test options**: ជាការចុះបញ្ជីក្នុងការ `testing` ដោយប្រើ **JUnit5** ។
+- **Test options**: ជាការចុះបញ្ជីក្នុងការ `testing` ដោយប្រើ **JUnit5**។
 
 ---
 
@@ -169,15 +169,15 @@ tasks.withType<Test> {
 
 ![Spring Boot Starter 8090](/img/docs/springboot-starter-8090.jpg)
 
-- រូបភាពខាងក្រោមនេះគឺនៅពេលកម្មវិធីត្រូវបានប្រតិបត្តិបានជោគជ័យ បន្ទាប់មកទៅបើកមើលលទ្ធផលនៅលើ **Browser** ។ មូលហេតុដែលវាចេញពាក្យ **`Whitelabel Error Page`** គឺដោយសារតែអ្នកមិនទាន់បង្កើតនូវ **Controller** សម្រាប់ទំព័រមួយនេះ។
+- រូបភាពខាងក្រោមនេះគឺនៅពេលកម្មវិធីត្រូវបានប្រតិបត្តិបានជោគជ័យ បន្ទាប់មកទៅបើកមើលលទ្ធផលនៅលើ **Browser**។ មូលហេតុដែលវាចេញពាក្យ **`Whitelabel Error Page`** គឺដោយសារតែអ្នកមិនទាន់បង្កើតនូវ **Controller** សម្រាប់ទំព័រមួយនេះ។
 
 ![Spring Boot Starter 8090 Result](/img/docs/springboot-starter-8090-result.jpg)
 
-- រូបភាពខាងក្រោមនេះគឺនឹងនាំអ្នកទៅបង្កើតឯកសារមួយមានឈ្មោះថា **TestController** ។
+- រូបភាពខាងក្រោមនេះគឺនឹងនាំអ្នកទៅបង្កើតឯកសារមួយមានឈ្មោះថា **TestController**។
 
 ![Test Contoller Folder](/img/docs/test-contoller-folder.jpg)
 
-- ដែលនៅក្នុងឯកសារ **TestController** នោះគឺនឹងមានជាការបង្កើតនៅ **route** មួយសម្រាប់ទំព័រ `'/testing-page'` ហើយមានមុខងារមួយជាប្រភេទ **Get** ។
+- ដែលនៅក្នុងឯកសារ **TestController** នោះគឺនឹងមានជាការបង្កើតនៅ **route** មួយសម្រាប់ទំព័រ `'/testing-page'` ហើយមានមុខងារមួយជាប្រភេទ **Get**។
 
 ![Test Contoller File](/img/docs/test-contoller-file.jpg)
 
