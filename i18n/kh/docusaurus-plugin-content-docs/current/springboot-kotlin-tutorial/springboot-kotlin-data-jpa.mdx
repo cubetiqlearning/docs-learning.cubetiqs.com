@@ -61,3 +61,31 @@ open class Book {
    ...
 }
 ```
+
+ខាងលើនេះគឺជាទម្រង់នៃការបង្កើត **Entity** ហើយអ្នកប្រាកដជាឆ្ងល់ថា **Entity** គឺជាអ្វី? សម្រាប់ **Entity** វាជា `POJOs(Plain Old Java Objects) Class` មួយដែលពិពណ៍នាអំពីទិន្នន័យដែលអាចទាក់ទងទៅនឹង `Database` បាន។ សម្រាប់ **Entity** ផ្ទាល់គឺវាជា `table` នៅក្នុង `Database`។ ហើយនៅរាល់ `instance` នីមួយៗនៃ **Entity** គឺតំណាងឲ្យ `row` នីមួយៗនៅក្នុង `table`។
+
+បន្ថែមពីនេះ ដើម្បីអាចបង្កើត **Entity** បានអ្នកត្រូវប្រើប្រាស់ `Annotation @Entity` នៅពីលើ `Class` នោះហើយសម្រាប់ `Entity Class` គឺត្រូវតែមាននូវ `no-arg constructor` និង `primary key`។ លើសពីនេះទៅទៀត សម្រាប់ `Entity Class` គឺវាមិនអាចជាប្រភេទ `final` បាននោះទេ ព្រោះ `JPA implemenations` ត្រូវការផ្តល់ជាមុខងារមួយចំនួនទៅឲ្យ `Entity Class` របស់អ្នក។
+
+```kotlin
+@Entity(name="book")
+open class Book {
+   ...
+}
+```
+
+នៅខាងលើនេះអ្នកបានឃើញហើយថានៅក្នុង `Annotation @Entity` គឺមានអាគុយម៉ង់ `name` ដែលវាប្រើសម្រាប់កំណត់ឈ្មោះទៅឲ្យ `entity` ហើយជាទូទៅឈ្មោះរបស់ `entity` គឺគេប្រើវានៅពេលដែលគេចង់ `query` ទិន្នន័យដោយប្រើ **JPQL**។
+
+```kotlin
+@Entity
+open class Book {
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  private var id: Long
+
+  private var name: String
+
+  // getters and setters
+}
+```
+
+នៅខាងលើនេះគឺជាការកំណត់នូវ `Primary Key` ទៅឲ្យ **Entity** នីមួយៗ ហើយដើម្បីអាចកំណត់នូវ `Primary Key` បានគឺអ្នកត្រូវប្រើប្រាស់ `Annotation @Id` នៅលើ `attribute` ណាដែលអ្នកចង់ដាក់ជា `Primary Key` ហើយលើសពីនេះទៅទៀតគឺអ្នកអាចប្រើនូវប្រភេទ `generator` បានសម្រាប់ `primary key` ដោយប្រើប្រាស់ `Annotation @GeneratedValue` ហើយអាគុយម៉ង់ `strategy` ហើយតម្លៃមានដូចជា `AUTO, TABLE, SEQUENCE, និង IDENTITY`។
