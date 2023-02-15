@@ -11,15 +11,15 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 - ក្នុងន័យសាមញ្ញ **Docker** ជាកម្មវិធីមួយដែលសម្រួលដំណើរការនៃការបង្កើតកម្មវិធី, គ្រប់គ្រងកម្មវិធីនិងចែកចាយកម្មវិធីទៅកន្លែងផ្សេងទៀត។ វាធ្វើដូចនេះដោយធ្វើឲ្យគ្រប់ប្រព័ន្ធប្រតិបត្តិការរបស់កុំព្យូទ័រទាំងអស់អាចទាញយកកម្មវិធីនិងដំណើរការកម្មវិធីណាមួយដោយមានភាពងាយស្រួល និងគ្មានការកំណត់រចនាសម្ព័ន្ធអីច្រើននោះទេ។
 
-- **Docker** ប្រើ `container` សម្រាប់ភ្ជាប់ទៅកាន់ប្រព័ន្ធប្រតិបត្តិការរបស់កុំព្យូទ័រ ដើម្បីអាចប្រតិបត្តិនូវកម្មវិធីបាន។ វាអនុញ្ញាតឲ្យកម្មវិធីអាចប្រើប្រាស់នូវ `Linux kernel` ដូចគ្នាជាលក្ខណះ `system` ដែលភ្ចាប់នៅលើកុំព្យូទ័រ, ជាជាងការបង្កើតនូវ `virtual operating system` ទាំងមូល។
+- **Docker** ប្រើ `container` សម្រាប់ភ្ជាប់ទៅកាន់ប្រព័ន្ធប្រតិបត្តិការរបស់កុំព្យូទ័រ ដើម្បីអាចប្រតិបត្តិនូវកម្មវិធីបាន។ វាអនុញ្ញាតឲ្យកម្មវិធីអាចប្រើប្រាស់នូវ `Linux kernel` ដូចគ្នាជាលក្ខណៈ `system` ដែលភ្ចាប់នៅលើកុំព្យូទ័រ, ជាជាងការបង្កើតនូវ `virtual operating system` ទាំងមូល។
 
-- **Docker** ត្រូវបានបង្កើតឡើងដោយលោក `Kamel Founadi`, លោក `Solomon Hykes` និងលោក `Sebastien Pahl` និងប្រើភាសា `Golang Programming Language` ។ មកដល់ពេលនេះ **Docker** បានបង្កើតបានរយះពេល <CountYearComponent startYear={2013} /> ឆ្នាំហើយគិតត្រឹមពី ថ្ងៃទី20 ខែមិនា ឆ្នាំ2013 ។
+- **Docker** ត្រូវបានបង្កើតឡើងដោយលោក `Kamel Founadi`, លោក `Solomon Hykes` និងលោក `Sebastien Pahl` និងប្រើភាសា `Golang Programming Language`។ មកដល់ពេលនេះ **Docker** បានបង្កើតបានរយះពេល <CountYearComponent startYear={2013} /> ឆ្នាំហើយគិតត្រឹមពី ថ្ងៃទី20 ខែមិនា ឆ្នាំ2013។
 
-- **Docker** រួមបញ្ចូលជាមួយនឹងសមាសធាតុជាច្រើនដូចជា **Docker client**, **Docker server**, **Docker machine**, **Docker hub**, **Docker composes** ។ល។
+- **Docker** រួមបញ្ចូលជាមួយនឹងសមាសធាតុជាច្រើនដូចជា **Docker client**, **Docker server**, **Docker machine**, **Docker hub**, **Docker composes**។ល។
 
 ### អ្វីទៅជា Docker Container?
 
-- **Docker Container** ជា `virtual machine` ដែលមានលក្ខណះ `lightweight` ។ វាអនុញ្ញាតឲ្យអ្នកអភិវឌ្ឍអាចវេចខ្ចប់នូវកម្មវិធីដែលរួមបញ្ចូលនូវ `libraries` និង `dependencies` ទាំងអស់ដែលពាក់ព័ន្ធជាមួយនឹងកម្មវិធី, ហើយដឹកតាមនាវាជាលក្ខណះកញ្ចប់មួយៗ។
+- **Docker Container** ជា `virtual machine` ដែលមានលក្ខណៈ `lightweight`។ វាអនុញ្ញាតឲ្យអ្នកអភិវឌ្ឍអាចវេចខ្ចប់នូវកម្មវិធីដែលរួមបញ្ចូលនូវ `libraries` និង `dependencies` ទាំងអស់ដែលពាក់ព័ន្ធជាមួយនឹងកម្មវិធី, ហើយដឹកតាមនាវាជាលក្ខណៈកញ្ចប់មួយៗ។
 
 ![Docker Container](/img/docs/docker-container.jpg)
 
@@ -27,7 +27,7 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 ### អ្វីទៅជា Virtual Machine?
 
-- **Virtual Machine** ជាកម្មវិធីដែលអនុញ្ញាតឲ្យយើងអាចធ្វើការទាញយកនិងប្រើប្រាស់នូវប្រព័ន្ធប្រតិបត្តិការផ្សេងៗ(`Windows`, `Linux`, និង `Debian`) នៅក្នុងពេលដំណាលគ្នានៅលើម៉ាស៊ីនរបស់យើង។ ប្រព័ន្ធប្រតិបត្តិការដែល `virtual machine` កំពុងដំណើរការគឺគេហៅថា `virtualized operating systems` ។ **Virtualized Operating Systems** ទាំងអស់នេះគឺអាចប្រតិបត្តិនូវកម្មវិធីនិងបំពេញភារកិច្ចដូចប្រព័ន្ធប្រតិបត្តិការពិតៗអញ្ចឹង។
+- **Virtual Machine** ជាកម្មវិធីដែលអនុញ្ញាតឲ្យយើងអាចធ្វើការទាញយកនិងប្រើប្រាស់នូវប្រព័ន្ធប្រតិបត្តិការផ្សេងៗ(`Windows`, `Linux`, និង `Debian`) នៅក្នុងពេលដំណាលគ្នានៅលើម៉ាស៊ីនរបស់យើង។ ប្រព័ន្ធប្រតិបត្តិការដែល `virtual machine` កំពុងដំណើរការគឺគេហៅថា `virtualized operating systems`។ **Virtualized Operating Systems** ទាំងអស់នេះគឺអាចប្រតិបត្តិនូវកម្មវិធីនិងបំពេញភារកិច្ចដូចប្រព័ន្ធប្រតិបត្តិការពិតៗអញ្ចឹង។
 
 ![Virtual Machine](/img/docs/virtual-machine.jpg)
 
@@ -46,8 +46,8 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
       <td>Virtual Machine គឺយឺតហើយមានតម្លៃថ្លៃ។</td>
     </tr>
     <tr>
-      <td>គ្មានការខ្ជះខ្ជាយ memory ។</td>
-      <td>ខ្ជះខ្ជាយ memory ។</td>
+      <td>គ្មានការខ្ជះខ្ជាយ memory។</td>
+      <td>ខ្ជះខ្ជាយ memory។</td>
     </tr>
     <tr>
       <td>វាប្រើប្រាស់ kernel ដូចគ្នា ប៉ុន្តែ distribution ខុសគ្នា។</td>
@@ -70,7 +70,7 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 - គុណសម្បត្តិរបស់ **Docker** គឺមានដូចខាងក្រោម៖
   - វាប្រើ `memory` អស់តិច។
-  - វាផ្តល់នូវ `lightweight virtualization` ។
+  - វាផ្តល់នូវ `lightweight virtualization`។
   - វាមិនទាមទារឲ្យមានប្រព័ន្ធប្រតិបត្តិការពេញលេញ ដើម្បីដំណើរការកម្មវិធីនោះទេ។
   - វាអនុញ្ញាតឲ្យអ្នកប្រើនូវ `remote repository` ដើម្បីអាចចែករំលែក `container` ជាមួយអ្នកដទៃ។
 
@@ -78,15 +78,15 @@ import TableComponent from "@site/src/components/SharedFeatures/table";
 
 - គុណវិបត្តិរបស់ **Docker** គឺមានដូចខាងក្រោម៖
   - វាបង្កើននូវភាពស្មុគស្មាញដោយសារតែមាននូវស្រទាប់បន្ថែម។
-  - នៅក្នុង `Docker`, វាពិបាកនៅក្នុងការគ្រប់គ្រងចំនួនបរិមាណដ៏ធំនៃ `container` ។
-  - មុខងារខ្លះដូចជា `container self-registration`, `containers self-inspects`, ចម្លងឯកសារពី `host` ទៅ `container`, និងអ្វីផ្សេងទៀតត្រូវបានបាត់នៅក្នុង `Docker` ។
-  - `Docker` មិនមានដំណោះស្រាយដ៏ល្អសម្រាប់កម្មវិធីដែលទាមទារនូវ `rich graphical interface` ។
+  - នៅក្នុង `Docker`, វាពិបាកនៅក្នុងការគ្រប់គ្រងចំនួនបរិមាណដ៏ធំនៃ `container`។
+  - មុខងារខ្លះដូចជា `container self-registration`, `containers self-inspects`, ចម្លងឯកសារពី `host` ទៅ `container`, និងអ្វីផ្សេងទៀតត្រូវបានបាត់នៅក្នុង `Docker`។
+  - `Docker` មិនមានដំណោះស្រាយដ៏ល្អសម្រាប់កម្មវិធីដែលទាមទារនូវ `rich graphical interface`។
 
 ### Docker Engine
 
 - វាជា `client server application` ដែលមានធាតុផ្សំសំខាន់ៗដូចខាងក្រោម៖
-  - `Server` ដែលជាប្រភេទកម្មវិធីដែលដំណើរការយូរហៅថា `daemon process` ។
+  - `Server` ដែលជាប្រភេទកម្មវិធីដែលដំណើរការយូរហៅថា `daemon process`។
   - `REST API` ត្រូវបានប្រើដើម្បីបញ្ជាក់ពីចំណុចប្រទាក់នៃកម្មវិធីដែលអាចប្រើដើម្បីនិយាយទៅកាន់ `daemon` ហើយណែនាំឲ្យធ្វើអ្វីមួយ។
-  - `Client` មានជា `command line interface` សម្រាប់ដាក់ពាក្យបញ្ជាទៅកាន់ `Server` ។
+  - `Client` មានជា `command line interface` សម្រាប់ដាក់ពាក្យបញ្ជាទៅកាន់ `Server`។
 
 ![Docker Engine](/img/docs/docker-engine.jpg)
