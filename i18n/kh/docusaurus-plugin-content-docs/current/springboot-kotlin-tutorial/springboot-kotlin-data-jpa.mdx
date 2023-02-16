@@ -77,9 +77,9 @@ open class Book {
 }
 ```
 
-នៅខាងលើនេះអ្នកបានឃើញហើយថានៅក្នុង `Annotation @Entity` គឺមានអាគុយម៉ង់ `name` ដែលវាប្រើសម្រាប់កំណត់ឈ្មោះទៅឲ្យ `entity` ហើយជាទូទៅឈ្មោះរបស់ `entity` គឺគេប្រើវានៅពេលដែលគេចង់ `query` ទិន្នន័យដោយប្រើ **JPQL**។
+នៅខាងលើនេះអ្នកបានឃើញហើយថានៅក្នុង `Annotation @Entity` គឺមានអាគុយម៉ង់់ `name` ដែលវាប្រើសម្រាប់កំណត់ឈ្មោះទៅឲ្យ `entity` ហើយជាទូទៅឈ្មោះរបស់ `entity` គឺគេប្រើវានៅពេលដែលគេចង់ `query` ទិន្នន័យដោយប្រើ **JPQL**។
 
-**ចំណាំ៖** បើសិនជាអ្នកមិនបានកំណត់នូវអាគុយម៉ង `name` នោះទេ ដូច្នេះ **JPA** នឹងធ្វើការយកឈ្មោះរបស់ `class` ទៅប្រើប្រាស់តែម្តង។
+**ចំណាំ៖** បើសិនជាអ្នកមិនបានកំណត់នូវអាគុយម៉ង់ `name` នោះទេ ដូច្នេះ **JPA** នឹងធ្វើការយកឈ្មោះរបស់ `class` ទៅប្រើប្រាស់តែម្តង។
 
 ```kotlin
 import javax.persistence.Entity
@@ -99,7 +99,7 @@ open class Book {
 }
 ```
 
-នៅខាងលើនេះគឺជាការកំណត់នូវ `Primary Key` ទៅឲ្យ **Entity** នីមួយៗ ហើយដើម្បីអាចកំណត់នូវ `Primary Key` បានគឺអ្នកត្រូវប្រើប្រាស់ `Annotation @Id` នៅលើ `attribute` ណាដែលអ្នកចង់ដាក់ជា `Primary Key` ហើយលើសពីនេះទៅទៀតគឺអ្នកអាចប្រើនូវប្រភេទ `generator` បានសម្រាប់ `primary key` ដោយប្រើប្រាស់ `Annotation @GeneratedValue` ហើយអាគុយម៉ង់ `strategy` ហើយតម្លៃមានដូចជា `AUTO, TABLE, SEQUENCE, និង IDENTITY` ហើយជានិច្ចកាលគេតែងតែប្រើប្រាស់ `AUTO` ឬក៏ `IDENTITY` ដែល `AUTO` គឺវានឹងធ្វើការ `generate` នូវ `id` បែបជា `auto` គឺ `generate` ទៅតាមម៉ាស៊ីន រីឯ `IDENTITY` គឺវានឹងធ្វើការ `generate` នូវ `id` បែបជាកើនម្តងមួយឯកតា។
+នៅខាងលើនេះគឺជាការកំណត់នូវ `Primary Key` ទៅឲ្យ **Entity** នីមួយៗ ហើយដើម្បីអាចកំណត់នូវ `Primary Key` បានគឺអ្នកត្រូវប្រើប្រាស់ `Annotation @Id` នៅលើ `attribute` ណាដែលអ្នកចង់ដាក់ជា `Primary Key` ហើយលើសពីនេះទៅទៀតគឺអ្នកអាចប្រើនូវប្រភេទ `generator` បានសម្រាប់ `primary key` ដោយប្រើប្រាស់ `Annotation @GeneratedValue` ហើយអាគុយម៉ង់់ `strategy` ហើយតម្លៃមានដូចជា `AUTO, TABLE, SEQUENCE, និង IDENTITY` ហើយជានិច្ចកាលគេតែងតែប្រើប្រាស់ `AUTO` ឬក៏ `IDENTITY` ដែល `AUTO` គឺវានឹងធ្វើការ `generate` នូវ `id` បែបជា `auto` គឺ `generate` ទៅតាមម៉ាស៊ីន រីឯ `IDENTITY` គឺវានឹងធ្វើការ `generate` នូវ `id` បែបជាកើនម្តងមួយឯកតា។
 
 ```kotlin
 import javax.persistence.Entity
@@ -112,7 +112,7 @@ open class Book {
 }
 ```
 
-នៅខាងលើនេះគឺអ្នកនឹងមកមើលទាក់ទងនឹង `Annotation @Table` វិញម្តងដែល `Annotation` មួយនេះគឺប្រើសម្រាប់ដាក់ឈ្មោះទៅឲ្យ `table` នៅក្នុង `database` ហើយអ្នកអាចដាក់ឈ្មោះបានលុះត្រាតែប្រើប្រាស់នូវអាគុយម៉ង `name` ហើយលើសពីនេះទៅទៀត អ្នកក៏អាចកំណត់បន្ថែមទាក់ទងនឹង `schema` ដែលអ្នកចង់ដាក់ឈ្មោះទៅឲ្យ `table` ដែលមានដូចខាងក្រោម៖
+នៅខាងលើនេះគឺអ្នកនឹងមកមើលទាក់ទងនឹង `Annotation @Table` វិញម្តងដែល `Annotation` មួយនេះគឺប្រើសម្រាប់ដាក់ឈ្មោះទៅឲ្យ `table` នៅក្នុង `database` ហើយអ្នកអាចដាក់ឈ្មោះបានលុះត្រាតែប្រើប្រាស់នូវអាគុយម៉ង់ `name` ហើយលើសពីនេះទៅទៀត អ្នកក៏អាចកំណត់បន្ថែមទាក់ទងនឹង `schema` ដែលអ្នកចង់ដាក់ឈ្មោះទៅឲ្យ `table` ដែលមានដូចខាងក្រោម៖
 
 ```kotlin
 import javax.persistence.Entity
@@ -132,6 +132,7 @@ import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
+import javax.persistence.Column
 
 @Entity
 @Table(name="books")
@@ -140,12 +141,22 @@ open class Book {
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private var id: Long
 
-  @Column(name="STUDENT_NAME", length=50, nullable=false, unique=false)
+  @Column(name="book_name", length=50, nullable=false, unique=false)
   private var name: String
+
+  @Column(name="book_description", columnDefinition="varchar(500) default 'Hello'")
+  private var description: String
 
   // getters and setters
 }
 
 ```
 
-ខាងលើនេះគឺអ្នកនឹងមកមើលទាក់ទងនឹង `Annotation @Column` ដែលប្រើសម្រាប់កំណត់នូវព័ត៌មានមួយចំនួនទៅឲ្យ `columns` នីមួយៗនៅក្នុង `table`។
+ខាងលើនេះគឺអ្នកនឹងមកមើលទាក់ទងនឹង `Annotation @Column` ដែលប្រើសម្រាប់កំណត់នូវព័ត៌មានមួយចំនួនទៅឲ្យ `columns` នីមួយៗនៅក្នុង `table` ហើយការកំណត់គឺមានច្រើន តែក្នុងនេះយើងបង្ហាញអ្នកតែអ្វីដែលគេប្រើច្រើនតែប៉ុណ្ណោះ ដែលមានដូចជា៖
+
+- កំណត់ឈ្មោះទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `name` ហើយប្រភេទទិន្នន័យរបស់អាគុយម៉ង់នេះជា `String` ហើយបើសិនជាអ្នកមិនបានកំណត់ទេ នោះ **JPA** នឹងយកឈ្មោះរបស់ `attribute` ទៅបង្កើតជាឈ្មោះរបស់ `column` តែម្តង
+- កំណត់លក្ខណៈមិនអាចស្ទួនទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `unique` ហើយប្រភេទទិន្នន័យរបស់អាគុយម៉ង់នេះជា `Boolean` ដូច្នេះបើអ្នកចង់ឲ្យ `column` មួយណាមានលក្ខណៈមិនអាចស្ទួន អ្នកអាចកំណត់តម្លៃ `true` ទៅកាន់អាគុយម៉ង់នេះបាន ហើយបើសិនជាអ្នកមិនបានកំណត់ទេ នោះ `column` គឺអាចមានតម្លៃស្ទួនគ្នាបាន
+- កំណត់លក្ខណៈទទេទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `nullable` ហើយប្រភេទទិន្នន័យរបស់អាគុយម៉ង់នេះជា `Boolean` ដូច្នេះបើអ្នកចង់ឲ្យ `column` មិនអាចទទេបាន អ្នកអាចកំណត់តម្លៃ `false` ទៅកាន់អាគុយម៉ង់នេះបាន ហើយបើសិនជាអ្នកមិនបានកំណត់ទេ នោះ `column` គឺអាចមានតម្លៃទទេបាន
+- កំណត់ប្រវែងទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `length` ហើយប្រភេទទិន្នន័យរបស់អាគុយម៉ង់នេះជា `Int` ហើយបើសិនជាអ្នកមិនបានកំណត់ទេ នោះ **JPA** នឹងយកតម្លៃដើមទៅកំណត់
+- កំណត់លក្ខណៈការពារមិនឲ្យមានការបង្កើតនិងការកែប្រែទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `insertable` និង `updatable` ដែល `insertable` ធ្វើការការពារនឹងមិនឲ្យមានការបន្ថែមតម្លៃនៅក្នុង `column` បាននៅពេល `operation` របស់ **SQL** កំពុងតែ `insert` ហើយបើអ្នកចង់បានការការពារចឹង អាចកំំណត់តម្លៃ `false` ទៅកាន់អាគុយម៉ង់នេះបាន រីឯ `updatable` គឺដូចនឹង `insertable` ដែរតែខុសត្រង់ `updatable` ត្រូវប្រើដើម្បីការពារនៅពេល `operation` របស់ **SQL** កំពុងតែ `update` វិញ ហើយលើសពីនេះសម្រាប់ប្រភេទទិន្នន័យវាទាំងពីរនេះគឺ `Boolean` ហើយបើសិនជាអ្នកមិនបានកំណត់ពួកវាទេ នោះ `column` គឺអាចបន្ថែមតម្លៃចូលធម្មតា ហើយគ្មានការការពារអីនោះទេ
+- កំណត់លក្ខណៈ **SQL DDL** ទៅឲ្យ `column` ដោយប្រើប្រាស់អាគុយម៉ង់ `columnDefinition` ហើយប្រភេទទិន្នន័យរបស់អាគុយម៉ង់នេះជា `String` ហើយបើសិនជាអ្នកមិនបានកំណត់ទេ នោះវានឹងយកតម្លៃដើមមកប្រើធម្មតា
